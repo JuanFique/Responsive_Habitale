@@ -1,0 +1,128 @@
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #2715E6;
+    --gradient-blue-top: rgba(21, 135, 230, 0.80);
+    --white: #FFFDFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(180deg, var(--gradient-blue-top) 0%, var(--primary-blue) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.registration-form {
+    width: 490px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Rubik One', sans-serif;
+    color: var(--primary-blue);
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    color: white;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    height: 41px;
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+.register-btn {
+    width: 98px;
+    height: 36px;
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.login-prompt {
+    color: var(--white);
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: white;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content .logo {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .registration-form,
+    .footer-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
