@@ -1,0 +1,127 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #1545E6;
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px;
+}
+
+.login-form {
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    height: 41px;
+    background-color: #2715E6;
+    border: none;
+    border-radius: 5px;
+    color: #7C70FF;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #7C70FF;
+    font-size: 12px;
+}
+
+.login-button {
+    width: 100%;
+    height: 36px;
+    background-color: #1545E6;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.signup-link {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 20px 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .login-form {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+}
