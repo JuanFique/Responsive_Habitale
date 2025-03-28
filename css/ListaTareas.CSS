@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Rubik+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    padding: 0 60px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.back-icon {
+    width: 29px;
+    height: 41px;
+    margin-right: 30px;
+}
+
+.logo {
+    color: #1545E6;
+    font-size: 32px;
+    font-family: 'Rubik One', sans-serif;
+    font-weight: 400;
+}
+
+main {
+    flex-grow: 1;
+    background-color: #1587E6;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 34.5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 62px; /* Space between tasks */
+    align-items: center;
+}
+
+.task-item {
+    width: 870px;
+    height: 103px;
+    background-color: #6B15E6;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.task-name {
+    color: white;
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+.start-btn {
+    width: 175px;
+    height: 68px;
+    background-color: #15C9E6;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    line-height: 34.5px;
+    cursor: pointer;
+}
+
+footer {
+    height: 246px;
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 108px;
+}
+
+.brand {
+    color: #1545E6;
+    font-size: 32px;
+    font-family: 'Rubik One', sans-serif;
+    font-weight: 400;
+    margin-top: 21px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.address, .email {
+    display: flex;
+    align-items: center;
+}
+
+.location-icon, .email-icon {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    color: #FFFDFD;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.copyright {
+    margin-top: 60px;
+}
+
+.copyright p {
+    color: #FFFDFD;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+/* This ensures icons are visible (placeholders for actual icons) */
+.location-icon {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.email-icon {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+}
