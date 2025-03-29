@@ -1,0 +1,136 @@
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #1589E6;
+    --purple-background: #6B15E6;
+    --avatar-box-color: #480BA0;
+    --white: #FFFFFF;
+    --text-light: #FFFDFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--primary-blue);
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.avatar-selection {
+    text-align: center;
+    padding: 20px;
+}
+
+.avatar-selection h1 {
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.avatar-selection p {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.avatar-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.avatar-option {
+    background-color: var(--avatar-box-color);
+    border-radius: 20px;
+    width: 360px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.avatar-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.avatar-option h2 {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.select-avatar {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.select-avatar:hover {
+    background-color: #0f35b3;
+}
+
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--text-light);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .avatar-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
