@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Rubik+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Rubik', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    height: 108px; /* 10% of height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    padding: 0 60px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.back-icon {
+    width: 43px; /* Scaled proportionally */
+    height: 62px;
+    margin-right: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 48px;
+    font-family: 'Rubik One', sans-serif;
+}
+
+.add-task-btn {
+    width: 98px;
+    height: 95px;
+}
+
+.add-task-circle {
+    width: 98px;
+    height: 95px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #706D6D;
+    font-size: 96px;
+    font-family: 'Rounded Mplus 1c', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-task-section {
+    height: 540px; /* 50% of height */
+    background-color: #1587E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-task-section p {
+    color: white;
+    font-size: 48px;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+
+.task-list-section {
+    height: 216px; /* 20% of height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-list-btn {
+    background-color: #6B15E6;
+    border-radius: 75px;
+    padding: 22px 45px;
+    color: white;
+    font-size: 48px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.2;
+}
+
+footer {
+    height: 216px; /* 20% of height */
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    text-align: center;
+    color: white;
+}
+
+.footer-content .brand {
+    font-size: 48px;
+    font-family: 'Rubik One', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 21px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    font-size: 21px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
