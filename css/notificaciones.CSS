@@ -1,0 +1,151 @@
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #15C9E6;
+    --light-blue: #156EE6;
+    --purple: #6B15E6;
+    --white: #FFFDFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+}
+
+header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 47px;
+    height: 45px;
+}
+
+.logo-text {
+    color: var(--primary-blue);
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.page-title {
+    color: white;
+    font-size: 68px;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.notification-card {
+    width: 881px;
+    height: 126px;
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.notification-message {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.action-button {
+    width: 175px;
+    height: 68px;
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--primary-blue);
+}
+
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 48px;
+    }
+
+    .notification-card {
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
