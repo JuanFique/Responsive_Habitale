@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #1587E6;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-family: 'Rubik One', sans-serif;
+    color: #1545E6;
+    font-size: 32px;
+}
+
+.cta-button {
+    background-color: #2715E6;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.cta-button span {
+    margin: 0 10px;
+}
+
+/* Study Habits Title */
+.study-habits-title {
+    background-color: #2B00AB;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.study-habits-title h1 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Study Method Cards */
+.study-method {
+    background-color: #3C54E6;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 40px;
+}
+
+.study-method-image {
+    margin-right: 37px;
+}
+
+.study-method-content {
+    color: white;
+    text-align: center;
+}
+
+.study-method-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.78);
+    margin-bottom: 14px;
+}
+
+.study-method-description {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.study-method-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn {
+    background-color: #15C9E6;
+    border-radius: 50px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 20px;
+    text-align: center;
+    color: #FFFDFD;
+}
+
+.footer-contact {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .study-method {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .study-method-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .study-method-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        margin-bottom: 15px;
+    }
+}
