@@ -3,6 +3,7 @@
     --secondary-blue: #2715E6;
     --gradient-blue-top: rgba(21, 135, 230, 0.80);
     --white: #FFFDFD;
+    --button-hover-blue: #0D3ABF;
 }
 
 * {
@@ -29,19 +30,59 @@ body {
 
 .registration-form {
     width: 490px;
-    background-color: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .logo {
-    font-family: 'Rubik One', sans-serif;
-    color: var(--primary-blue);
-    font-size: 32px;
-    margin-bottom: 30px;
-    text-align: center;
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 230px;
+    height: 70px;
 }
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Center it using transform */
+}
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 280px;
+    height: 20px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    right: 72%;
+}
+.logoCorreo{
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 280px;
+    height: 20px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    right: 72%;
+}
+
 
 .input-group {
     width: 100%;
@@ -59,11 +100,15 @@ body {
     width: 100%;
     height: 41px;
     background-color: var(--secondary-blue);
-    border: none;
-    border-radius: 5px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 10px;
     color: white;
-    padding: 0 10px;
-    font-size: 12px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.input-group input::placeholder {
+    color: rgba(155, 151, 151, 0.7);
 }
 
 .register-btn {
@@ -72,24 +117,35 @@ body {
     background-color: var(--primary-blue);
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     text-transform: uppercase;
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 70px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: var(--button-hover-blue);
 }
 
 .login-prompt {
     color: var(--white);
     font-size: 14px;
-    margin-top: 15px;
-    text-align: center;
+    margin-top: 5px;
+    margin-right: 210px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.login-prompt:hover {
+    font-weight: bold;
 }
 
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
     color: white;
-    padding: 30px 0;
+    padding: 40px 0;
     width: 100%;
 }
 
@@ -98,31 +154,137 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .footer-content .logo {
-    color: white;
-    margin-bottom: 15px;
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
 }
 
-.contact-info {
+.contact-info1{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6; /* Line color */
+    margin: 15px 0; /* Space around the line */
+}
+
+.contact-info1:hover { 
+    font-weight: bold; /* Make text bold */
+}
+.contact-info2:hover { 
+    font-weight: bold; /* Make text bold */
 }
 
 .copyright {
     font-size: 14px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: -2px;
+}
+.copyright:hover { 
+    font-weight: bold; /* Make text bold */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     .registration-form,
     .footer-content {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 10px;
     }
 }
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1587E6; /* Dark blue background */
+    color: white;
+    width: 800px; /* Increase width */
+    height: 700px; /* Increase height */
+    padding: 40px; /* Add more padding */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border: 50px solid #2715E6; /* Add a border to match the design */
+}
+
+.popup h2 {
+    font-size:52px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.popup p {
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.popup button {
+    background-color: #00CFFF; /* Button color */
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #00A3CC; /* Darker button color on hover */
+}
+
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999;
+    pointer-events: none; /* Disable interaction with the overlay */
+}
+
