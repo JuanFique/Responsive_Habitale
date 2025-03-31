@@ -1,40 +1,40 @@
-body {
-    font-family: 'Rubik', sans-serif;
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #2715E6;
+    --gradient-blue-top: rgba(21, 135, 230, 0.80);
+    --white: #FFFDFD;
+    --button-hover-blue: #0D3ABF;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(180deg, var(--gradient-blue-top) 0%, var(--primary-blue) 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
 }
 
 .logo {
-    color: #1545E6;
-    font-family: 'Rubik One', sans-serif;
-    font-size: 32px;
-}
-
-main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 15px;
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: 230px;
+    height: 70px;
 }
 
 .login-form {
@@ -46,82 +46,248 @@ main {
 
 .form-group {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-label {
-    display: block;
+.form-group label {
     color: white;
     font-size: 12px;
     margin-bottom: 5px;
+    display: block;
 }
 
-input {
+.form-group input {
     width: 100%;
     height: 41px;
-    background-color: #2715E6;
-    border: none;
-    border-radius: 5px;
-    color: #7C70FF;
-    padding: 0 10px;
-    box-sizing: border-box;
+    background-color: var(--secondary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 10px;
+    color: white;
+    padding: 0 15px;
+    font-size: 14px;
 }
 
 input::placeholder {
-    color: #7C70FF;
-    font-size: 12px;
+    color: rgba(155, 151, 151, 0.7);
 }
 
 .login-button {
-    width: 100%;
+    width: 98px;
     height: 36px;
-    background-color: #1545E6;
+    background-color: var(--primary-blue);
+    color: var(--white);
     border: none;
-    border-radius: 3px;
-    color: white;
+    border-radius: 5px;
     text-transform: uppercase;
     font-size: 12px;
+    margin-top: 70px; /* Adjusted for consistency */
     cursor: pointer;
-    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: var(--button-hover-blue);
 }
 
 .signup-link {
-    color: white;
+    color: var(--white);
     font-size: 14px;
-    text-align: center;
-    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 170px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    font-weight: bold;
 }
 
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px 0;
-    margin-top: auto;
+    color: var(--white);
+    padding: 40px 0;
     width: 100%;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.contact-info p {
-    margin: 5px 0;
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
     font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold; /* Make text bold */
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold; /* Make text bold */
 }
 
 .copyright {
-    margin-top: 10px;
     font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-    .login-form {
-        width: 90%;
-    }
+.copyright:hover {
+    font-weight: bold; /* Make text bold */
+}
 
-    .logo {
-        font-size: 24px;
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1587E6;
+    color: var(--white);
+    width: 800px;
+    height: 700px;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border: 50px solid #2715E6;
+}
+
+.popup h2 {
+    font-size: 52px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.popup p {
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.popup button {
+    background-color: #00CFFF;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 20px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: color;
+}
+
+.popup button:hover {
+    background-color: #6B15E6;
+    color: white;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    pointer-events: none;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    right: 74%;
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    right: 74%;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6; /* Line color */
+    margin: 15px 0; /* Space around the line */
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Ensure it's treated as a block element */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Center it using transform */
+}
+
+@media (max-width: 400px) {
+    .login-form,
+    .footer-content {
+        width: 100%;
+        padding: 0 10px;
     }
 }
