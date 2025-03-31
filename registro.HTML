@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="registration-form">
-            <div class="logo">HABITALE</div>
+            <div class="logo"></div>
             
             <div class="input-group">
                 <label for="username">Nombre de Usuario</label>
@@ -30,25 +30,39 @@
                 <label for="confirm-password">Repetir Contraseña</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Repetir Contraseña">
             </div>
-            
-            <button class="register-btn">REGISTRARSE</button>
-            
             <div class="login-prompt"> 
                 <a href="login.HTML">¿Ya tienes una cuenta? Inicia sesión aquí</a>
             </div>
+            <button class="register-btn" id="register-btn">REGISTRARSE</button>
         </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Registro exitoso...</h2>
+        <p>¡Es hora de iniciar sesión!</p>
+        <button id="close-popup">Iniciar sesión</button>
     </div>
 
     <footer>
         <div class="footer-content">
-            <div class="logo">HABITALE</div>
-            <div class="contact-info">
+            <div class="logo"></div>
+            <div class="contact-info1">
                 <p>Av. Cra 68 #110a - 70</p>
+                <div class="logoUbicacion"></div>
+            </div>
+            <div class="contact-info2">
                 <p>HabiTale@gmail.com</p>
+                <div class="logoCorreo"></div>
+            </div>
+            <div class="linea">
+                <p></p>
             </div>
             <div class="copyright">
                 COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
             </div>
+            <div class="logoMini"></div>
         </div>
     </footer>
 
