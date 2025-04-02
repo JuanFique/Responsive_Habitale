@@ -107,14 +107,12 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 30px;
     margin: 0 auto;
     display: block;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 2px;
 }
 
 .logoUbicacion {
@@ -127,7 +125,7 @@ body {
     height: 18px;
     margin: 0 auto;
     display: block;
-    right: 74%;
+    transform: translateX(-55%); /* Center horizontally */
 }
 
 .logoCorreo {
@@ -140,7 +138,7 @@ body {
     height: 18px;
     margin: 0 auto;
     display: block;
-    right: 74%;
+    transform: translateX(-55%); /* Center horizontally */
 }
 
 footer {
@@ -283,6 +281,22 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .logoUbicacion,
+    .logoCorreo {
+        width: 200px; /* Adjust width for smaller screens */
+        height: 14px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logoUbicacion,
+    .logoCorreo {
+        width: 150px; /* Further adjust width for very small screens */
+        height: 12px; /* Further adjust height for very small screens */
+    }
 }
 
 @media (max-width: 400px) {

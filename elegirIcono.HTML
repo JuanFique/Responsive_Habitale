@@ -8,61 +8,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Rubik+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="Images/Logo_Habitale.svg" alt="Habitale Logo">
-
-
-           
-        </div>
-    </header>
-
-    <main>
-        <section class="avatar-selection">
-            <h1>AVATAR</h1>
-            <p>Escoge el avatar de tu preferencia para comenzar esta aventura</p>
-            
-            <div class="avatar-grid">
-                <div class="avatar-option">
-                    <div class="avatar-image">
-                        <img src="Images/prince-habitale.png" alt="Princesa generosa">
-
-
-                    </div>
-                    <h2>Princesa generosa</h2>
-                    <button class="select-avatar">Seleccionar</button>
-                </div>
-                
-                <div class="avatar-option">
-                    <div class="avatar-image">
-                        <img src="Images/cab-habitale - copia (2).png" alt="Caballero noble">
-
-                    </div>
-                    <h2>Caballero noble</h2>
-                    <button class="select-avatar">Seleccionar</button>
-                </div>
-                
-                <div class="avatar-option">
-                    <div class="avatar-image">
-                     
-                        <img src="Images/mag-habitale - copia.png" alt="Mago sabio">
-
-                    </div>
-                    <h2>Mago sabio</h2>
-                    <button class="select-avatar">Seleccionar</button>
-                </div>
+    <div class="container">
+        <header>
+            <div class="back-icon">
+                <a href="javascript:history.back()">
+                    <img src="/Responsive_Habitale/Logos/Logo_back.svg" alt="Back Icon">
+                </a>
             </div>
-        </section>
-    </main>
+            <div class="logo-container">
+                <img src="/Responsive_Habitale/Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
+            </div>
+        </header>
 
-    <footer>
-        <div class="contact-info">
-            <p><i class="icon-location"></i> Av. Cra 68 #110a - 70</p>
-            <p><i class="icon-email"></i> HabiTale@gmail.com</p>
-        </div>
-        <div class="copyright">
-            <p>COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.</p>
-        </div>
-    </footer>
+        <main>
+            <section class="avatar-selection">
+                <h1>AVATAR</h1>
+                <p>Escoge el avatar de tu preferencia para comenzar esta aventura</p>
+                
+                <div class="avatar-grid">
+                    <div class="avatar-option">
+                        <div class="avatar-image">
+                            <img src="Images/prince-habitale.png" alt="Princesa generosa">
+                        </div>
+                        <h2>Princesa generosa</h2>
+                        <button class="select-avatar">Seleccionar</button>
+                    </div>
+                    
+                    <div class="avatar-option">
+                        <div class="avatar-image">
+                            <img src="Images/cab-habitale - copia (2).png" alt="Caballero noble">
+                        </div>
+                        <h2>Caballero noble</h2>
+                        <button class="select-avatar">Seleccionar</button>
+                    </div>
+                    
+                    <div class="avatar-option">
+                        <div class="avatar-image">
+                            <img src="Images/mag-habitale - copia.png" alt="Mago sabio">
+                        </div>
+                        <h2>Mago sabio</h2>
+                        <button class="select-avatar">Seleccionar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
+                </div>
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
+                </div>
+                <div class="linea">
+                    <p></p>
+                </div>
+                <div class="copyright">
+                    COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+                </div>
+                <div class="logoMini"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

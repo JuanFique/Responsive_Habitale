@@ -10,15 +10,42 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo-container">
-                <img src="Images/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
-
-                
+            <div class="menu-icon" id="menu-icon">
+                <img src="/Responsive_Habitale/Logos/Menu.svg" alt="Menu Icon">
             </div>
-            <h1 class="page-title">Notificaciones</h1>
+            <div class="logo-container">
+                <img src="/Responsive_Habitale/Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
+            </div>
         </header>
 
+        <div class="sidebar" id="sidebar">
+            <div class="menu-header">
+                <img src="/Responsive_Habitale/Logos/Logo_user.svg" alt="User Profile">
+                <div class="user-info">
+                    <span>Usuario</span>
+                    <small>Usuario@gmail.com</small>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_manzana.svg" alt="Perfil Icon">
+                    <a href="#">Perfil</a>
+                </li>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_coins.svg" alt="Hábitos Icon">
+                    <a href="#">Hábitos</a>
+                </li>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_grafica.svg" alt="Notificaciones Icon">
+                    <a href="#">Notificaciones</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+
         <main class="content">
+            <h1 class="page-title">Notificaciones</h1>
             <div class="image-container">
                 <img src="Images/Cab2-habitale.png" alt="Hero Image" class="hero-image">
 
@@ -35,19 +62,26 @@
 
         <footer>
             <div class="footer-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <img src="location-icon.png" alt="Location" class="icon">
-                        <span>Av. Cra 68 #110a - 70</span>
-                    </div>
-                    <div class="contact-item">
-                        <img src="email-icon.png" alt="Email" class="icon">
-                        <span>HabiTale@gmail.com</span>
-                    </div>
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
                 </div>
-                <p class="copyright">COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.</p>
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
+                </div>
+                <div class="linea">
+                    <p></p>
+                </div>
+                <div class="copyright">
+                    COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+                </div>
+                <div class="logoMini"></div>
             </div>
         </footer>
     </div>
+
+    <script src="js/sidebar.js"></script>
 </body>
 </html>

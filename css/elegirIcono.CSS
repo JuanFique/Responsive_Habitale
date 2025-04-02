@@ -5,6 +5,8 @@
     --avatar-box-color: #480BA0;
     --white: #FFFFFF;
     --text-light: #FFFDFD;
+    --light-blue: #156EE6;
+    --purple: #6B15E6;
 }
 
 * {
@@ -19,20 +21,48 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: space-between; /* Distribuir contenido uniformemente */
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* Permitir que el contenedor crezca para ocupar el espacio disponible */
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+}
+
+main {
+    flex-grow: 1; /* Hacer que el contenido principal ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente el contenido principal */
+    align-items: center;
+    width: 100%;
 }
 
 header {
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
-    padding: 20px;
+    height: 76px;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    padding: 0 50px;
+    position: relative;
+    gap: 10px;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    flex-shrink: 0; /* Evitar que se reduzca */
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 200px;
+    height: 60px;
 }
 
 .logo span {
@@ -45,12 +75,15 @@ header {
 .avatar-selection {
     text-align: center;
     padding: 20px;
+    margin: 20px auto; /* Centrar la sección */
+    max-width: 1200px; /* Limitar el ancho máximo */
 }
 
 .avatar-selection h1 {
     color: var(--white);
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 72px;
     margin-bottom: 10px;
 }
 
@@ -64,14 +97,14 @@ header {
 .avatar-grid {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 30px; /* Reducir el espacio entre elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
 }
 
 .avatar-option {
     background-color: var(--avatar-box-color);
     border-radius: 20px;
-    width: 360px;
+    width: 358px; /* Match notification container width */
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -113,10 +146,12 @@ header {
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
     color: var(--text-light);
-    padding: 20px;
+    padding: 40px 0; /* Match footer padding */
     text-align: center;
     margin-top: auto;
     position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Evitar que el footer se reduzca */
 }
 
 .contact-info {
@@ -128,10 +163,308 @@ footer {
     font-size: 14px;
     font-weight: 300;
 }
+.copyright:hover {
+    font-weight: bold;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -330px; /* Hidden by default */
+    width: 330px;
+    height: 43%;
+    border-radius: 0 30px 30px 0; /* Rounded corners on the left side */
+    background-color: var(--primary-blue);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    color: var(--white);
+}
+
+.sidebar.open {
+    left: 0; /* Slide in */
+}
+
+.sidebar .menu-header {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between image and text */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+.sidebar .menu-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-blue);
+}
+
+.sidebar .menu-header .user-info {
+    display: flex;
+    flex-direction: column; /* Stack username and email */
+}
+
+.sidebar .menu-header .user-info span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.sidebar .menu-header .user-info small {
+    font-size: 14px;
+    margin-top: 5px; /* Add spacing between username and email */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding: 10px 0;
+    border-top: 1px solid #15C9E6;
+    border-bottom: 1px solid #15C9E6;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+.sidebar ul li:hover {
+    background-color: #1B0EAC; /* Highlight on hover */
+}
+
+.sidebar ul li img {
+    width: 40px; /* Slightly smaller icons */
+    height: 40px;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center; /* Center the text */
+    transition: color 0.3s ease;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 10px; /* Reduced size for alignment */
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none; /* Hidden by default */
+}
+
+.overlay.active {
+    display: block; /* Show when active */
+}
+
+.notification-container {
+    background-color: var(--purple);
+    border-radius: 93px;
+    width: 510px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.notification-message {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.notification-message h2 {
+    margin-bottom: 15px;
+}
+
+.action-button {
+    width: 175px;
+    height: 68px;
+    background-color: var(--secondary-blue);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: var(--primary-blue);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
 
 @media (max-width: 1024px) {
     .avatar-grid {
+        gap: 20px; /* Reducir el espacio entre elementos */
+    }
+
+    .avatar-option {
+        width: 300px; /* Reducir el ancho de las opciones */
+    }
+}
+
+@media (max-width: 400px) {
+    .avatar-selection {
+        text-align: center;
+        padding: 20px;
+        margin-top: 100px; /* Adjust spacing below header */
+    }
+
+    .avatar-selection h1 {
+        font-size: 40px; /* Reducir el tamaño del título */
+    }
+
+    .avatar-selection p {
+        font-size: 18px; /* Reducir el tamaño del texto */
+    }
+
+    .avatar-grid {
+        display: flex;
+        justify-content: center;
+        gap: 50px; /* Match spacing style */
+        flex-wrap: wrap;
+    }
+
+    .avatar-option {
+        background-color: var(--avatar-box-color);
+        border-radius: 20px;
+        width: 100%; /* Hacer que las opciones ocupen todo el ancho */
+        padding-bottom: 20px;
+        display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .notification-container {
+        border-radius: 30px;
     }
 }
