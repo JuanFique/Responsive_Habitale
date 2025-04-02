@@ -235,9 +235,9 @@ footer {
     position: absolute;
     width: 290px;
     height: 18px;
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Ensure it's treated as a block element */
-    right: 74%;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%); /* Center horizontally */
 }
 
 .logoCorreo {
@@ -248,9 +248,25 @@ footer {
     position: absolute;
     width: 290px;
     height: 18px;
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Ensure it's treated as a block element */
-    right: 74%;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%); /* Center horizontally */
+}
+
+@media (max-width: 768px) {
+    .logoUbicacion,
+    .logoCorreo {
+        width: 200px; /* Adjust width for smaller screens */
+        height: 14px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logoUbicacion,
+    .logoCorreo {
+        width: 150px; /* Further adjust width for very small screens */
+        height: 12px; /* Further adjust height for very small screens */
+    }
 }
 
 .linea {
@@ -269,21 +285,19 @@ footer {
     margin: 15px 0; /* Space around the line */
 }
 
+
 .logoMini {
     background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 30px;
-    margin: 0 auto; /* Center horizontally */
-    display: block; /* Ensure it's treated as a block element */
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%); /* Center it using transform */
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
 }
-
 @media (max-width: 400px) {
     .login-form,
     .footer-content {
