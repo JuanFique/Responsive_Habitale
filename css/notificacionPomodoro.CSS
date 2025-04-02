@@ -36,15 +36,17 @@ header {
     position: relative;
 }
 
-.logo-container {
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo {
-    width: 47px;
-    height: 45px;
+.logo span {
+    color: var(--primary-blue);
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 .logo-text {
