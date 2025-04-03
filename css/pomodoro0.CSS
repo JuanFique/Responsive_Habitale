@@ -1,0 +1,302 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 41px;
+}
+
+.logo {
+    color: #1545E6;
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    background-color: white;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+/* Main Banner */
+.main-banner {
+    background-color: #2B00AB;
+    padding: 25px 20px;
+    margin-top: 76px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 930px;
+    max-width: 100%;
+}
+
+.banner-title {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 34.5px;
+    text-align: center;
+}
+
+/* Content Container */
+.content-container {
+    background-color: #1587E6;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+/* Section Styles */
+.section {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.section-header {
+    background-color: #2715E6;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.section-content {
+    padding: 30px;
+}
+
+.section-text {
+    font-size: 20px;
+    line-height: 34.5px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.benefits-list li {
+    font-size: 20px;
+    line-height: 34.5px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.benefits-list li::before {
+    content: "•";
+    position: absolute;
+    left: -5px;
+    color: #1545E6;
+    font-weight: bold;
+}
+
+/* Application Scenarios */
+.application-scenarios {
+    margin-top: 30px;
+}
+
+.scenario {
+    margin-bottom: 30px;
+}
+
+.scenario h3 {
+    font-size: 22px;
+    color: #1545E6;
+    margin-bottom: 10px;
+}
+
+.scenario p {
+    font-size: 20px;
+    line-height: 34.5px;
+}
+
+/* CTA Button */
+.cta-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #6B15E6;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #5412b9;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 40px 20px;
+    color: #FFFDFD;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-logo h2 {
+    color: #1545E6;
+    font-family: 'Rubik One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    background-color: white;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-banner {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        padding: 20px;
+    }
+    
+    .section-text, .benefits-list li, .scenario p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .scenario h3 {
+        font-size: 20px;
+    }
+    
+    .cta-button {
+        font-size: 28px;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0 10px;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .banner-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-text, .benefits-list li, .scenario p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    .cta-button {
+        font-size: 22px;
+        padding: 10px 25px;
+    }
+}
