@@ -1,0 +1,209 @@
+/* Base styles and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background-color: #1587E6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
+}
+
+.logo {
+    color: #1545E6;
+    font-size: 32px;
+    font-weight: 400;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 30px 0;
+}
+
+.page-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-subtitle {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Task list styles */
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+.task-item {
+    background-color: #6B15E6;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+}
+
+.task-text {
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.start-button {
+    background-color: #15C9E6;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #12b5cf;
+}
+
+/* Footer styles */
+.footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    color: #1545E6;
+    font-size: 32px;
+    font-weight: 400;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-text {
+    color: #FFFDFD;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.footer-bottom {
+    border-top: 1px solid #15C9E6;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright {
+    color: #FFFDFD;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .task-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .task-text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .page-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo, .footer-logo {
+        font-size: 24px;
+    }
+    
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .task-text {
+        font-size: 20px;
+    }
+    
+    .start-button {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+}

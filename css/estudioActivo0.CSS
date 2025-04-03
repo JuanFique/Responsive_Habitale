@@ -1,0 +1,283 @@
+/* Base styles and resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.5;
+    color: #000;
+    background-color: white;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    height: 76px;
+}
+
+.navbar {
+    width: 100%;
+    height: 76px;
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #1545E6;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
+}
+
+.logo-img {
+    height: 41px;
+}
+
+/* Banner styles */
+.banner {
+    width: 930px;
+    height: 92px;
+    background-color: #2B00AB;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 40px 0;
+    padding: 0 8px;
+}
+
+.banner-text {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 34.5px;
+    text-align: center;
+}
+
+/* Main content styles */
+main {
+    width: 100%;
+    background-color: #1587E6;
+    padding-bottom: 60px;
+}
+
+.section-container {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.33);
+    margin-bottom: 20px;
+}
+
+.section-header {
+    width: 100%;
+    height: 108px;
+    background-color: #2715E6;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.section-title {
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 34.5px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.image-container {
+    margin: 20px 0;
+}
+
+.section-image {
+    width: 509px;
+    height: 382px;
+}
+
+.text-content {
+    padding: 20px 60px;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34.5px;
+}
+
+.text-content p {
+    margin-bottom: 20px;
+}
+
+/* CTA Button styles */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.cta-button {
+    width: 260px;
+    height: 82px;
+    background-color: #6B15E6;
+    color: white;
+    font-size: 32px;
+    font-weight: 400;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #5710c2;
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    height: 246px;
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    opacity: 0.9;
+    padding-top: 20px;
+}
+
+.footer-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    color: #1545E6;
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    text-align: left;
+    background-color: white;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.address, .email {
+    display: flex;
+    gap: 10px;
+    color: #FFFDFD;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.copyright {
+    color: #FFFDFD;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0 50px;
+    }
+    
+    .banner {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .section-container {
+        width: 90%;
+    }
+    
+    .section-header {
+        padding-left: 30px;
+    }
+    
+    .text-content {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    
+    .banner-text {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .text-content {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+    .section-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+    
+    .banner-text {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .text-content {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .cta-button {
+        width: 200px;
+        height: 70px;
+        font-size: 24px;
+    }
+}
