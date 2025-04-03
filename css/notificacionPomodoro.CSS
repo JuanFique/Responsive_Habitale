@@ -28,7 +28,7 @@ body {
 /* Containers */
 .container {
     width: 100%;
-    max-width: 1200px; /* Limitar el ancho máximo */
+    max-width: none; /* Limitar el ancho máximo */
     display: flex;
     flex-direction: column;
     align-items: center;
