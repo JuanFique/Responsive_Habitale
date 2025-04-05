@@ -422,16 +422,6 @@ footer {
     bottom: 2px;
 }
 
-@media (max-width: 1024px) {
-    .avatar-grid {
-        gap: 20px; /* Reducir el espacio entre elementos */
-    }
-
-    .avatar-option {
-        width: 300px; /* Reducir el ancho de las opciones */
-    }
-}
-
 @media (max-width: 400px) {
     .avatar-selection {
         text-align: center;

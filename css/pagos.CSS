@@ -5,6 +5,7 @@
     --text-gray: rgba(0, 0, 0, 0.73);
 }
 
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -12,36 +13,64 @@
     font-family: 'Rubik', sans-serif;
 }
 
+/* Body Styling */
 body {
     background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
 }
 
+/* Container */
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    ;
 }
 
+/* Header */
 .logo {
-    text-align: center;
-    color: var(--primary-blue);
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
+    margin-top: 40px;
     margin-bottom: 20px;
+    width: 200px;
+}
+
+/* Plan Details */
+.plan-header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .plan-header h1 {
     color: var(--white);
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.plan-header small {
+    color: var(--white);
+    font-weight: 100;
     margin-bottom: 20px;
 }
 
+.plan-header h2 {
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 700;
+}
+
 .plan-details {
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
@@ -49,46 +78,80 @@ body {
     background: var(--primary-blue);
     border-radius: 20px;
     overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .plan-card-header {
     background: var(--secondary-blue);
-    padding: 10px 20px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--white);
 }
 
 .plan-card-header h2 {
-    color: var(--white);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
 }
 
-.plan-duration, .plan-price-description {
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 14px;
+.plan-duration {
+    text-align: right;
+}
+
+.plan-duration h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.plan-duration p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
 }
 
 .plan-card-body {
     padding: 20px;
-    color: rgba(255, 255, 255, 0.80);
+    color: var(--white);
 }
 
 .total-label {
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .total-price {
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
+.billing-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.billing-info li {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Payment Form */
 .payment-form {
+    width: 100%;
+    max-width: 600px;
     background: var(--white);
     border-radius: 20px;
     padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 120px;
 }
 
 .payment-form h2 {
@@ -162,27 +225,208 @@ body {
     padding: 12px 75px;
     border-radius: 3px;
     text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
 
+.continue-button button:hover {
+    background: #1A2E7A; /* Darker shade on hover */
+    cursor: pointer;
+}
+
+.continue-button button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Footer */
 footer {
-    background: linear-gradient(180deg, #1587E6 0%, rgba(21, 69, 230, 0.80) 100%);
-    padding: 20px;
-    margin-top: 20px;
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--white);
+    padding: 0% 0 40px; /* Reduce top padding and keep bottom padding */
     text-align: center;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    flex-shrink: 0; /* Evitar que se reduzca */
 }
 
-.contact-info {
-    color: var(--white);
-    margin-bottom: 10px;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
-.copyright {
-    color: var(--white);
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
     font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-@media (max-width: 768px) {
-    .form-row {
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.copyright:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+
+
+    .container {
+        gap: 10px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .plan-header h1, .plan-header h2 {
+        font-size: 24px;
+    }
+
+    .plan-card-header h2, .plan-duration h2 {
+        font-size: 18px;
+    }
+
+    .plan-card-body .total-price {
+        font-size: 16px;
+    }
+
+    .payment-form h2 {
+        font-size: 18px;
+    }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .input-container input {
+        font-size: 24px;
+    }
+
+    .continue-button button {
+        padding: 10px 50px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        text-align: left; /* Align content to the left */
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 300px; /* Adjust for smaller screens */
+        display: flex;
         flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .footer-content .logo {
+        width: 230px;
+        height: 70px;
+    }
+
+    .contact-info1, .contact-info2 {
+        font-size: 12px;
+    }
+
+
+
+    .copyright p {
+        font-size: 12px;
     }
 }
+
+
