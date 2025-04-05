@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     color: var(--white);
+    justify-content: space-between; /* Ensure footer stays at the bottom */
 }
 
 header {
@@ -327,7 +328,7 @@ h1 {
 
 .save-button {
     background-color: var(--secondary-blue);
-    color: var(--white);
+    color: var (--white);
     border: none;
 }
 
@@ -338,8 +339,11 @@ h1 {
 
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px;
+    color: var(--white);
+    padding: 40px 0;
     text-align: center;
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+    flex-shrink: 0; /* Evitar que se reduzca */
 }
 
 .footer-content {
@@ -464,22 +468,39 @@ footer {
     bottom: 2px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 400px) {
     .profile-edit {
         width: 95%;
-        padding: 30px;
+        padding: 20px;
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .form-group label {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .form-group input {
-        font-size: 24px;
-        height: 45px;
+        font-size: 20px;
+        height: 40px;
     }
+
+
+    .avatar-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .avatar-section h2 {
+        font-size: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
 }
