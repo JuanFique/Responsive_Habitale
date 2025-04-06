@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitale - Progreso</title>
+    <link rel="stylesheet" href="css/progreso.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Rubik+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" id="menu-icon">
+            <img src="/Responsive_Habitale/Logos/Menu.svg" alt="Menu Icon">
+        </div>
+        <div class="logo-container">
+            <img src="/Responsive_Habitale/Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
+        </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="menu-header">
+            <img src="/Responsive_Habitale/Logos/Logo_user.svg" alt="User Profile">
+            <div class="user-info">
+                <span>Usuario</span>
+                <small>Usuario@gmail.com</small>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_manzana.svg" alt="Perfil Icon">
+                <a href="#">Perfil</a>
+            </li>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_coins.svg" alt="Hábitos Icon">
+                <a href="#">Hábitos</a>
+            </li>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_grafica.svg" alt="Notificaciones Icon">
+                <a href="#">Notificaciones</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+        <section class="profile">
+            <h1>Perfil</h1>
+            <div class="profile-card">
+                <div class="profile-info">
+                    <img src="/Responsive_Habitale/Logos/Logo_user.svg" alt="Avatar" class="profile-avatar">
+                    <div>
+                        <h2>Usuario</h2>
+                        <p>Sin título</p>
+                        <p>Usuari@gmail.com</p>
+                    </div>
+                </div>
+                <div class="profile-level">
+                    <h3>Nivel</h3>
+                    <p>Guerrero</p>
+                    <img src="/Responsive_Habitale/Logos/Logo_warrior.svg" alt="Helmet Icon" class="level-icon">
+                </div>
+                <div class="edit-icon">
+                    <a href="editarPerfil.HTML">
+                        <img src="/Responsive_Habitale/Logos/Logo_edit.svg" alt="Edit Icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="calendar">
+            <h1>Progreso</h1>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h1>Historial</h1>
+                </div>
+                <div class="calendar-header">
+                    <button class="prev-month">&lt;</button>
+                    <h2 id="current-month">Enero 2025</h2>
+                    <button class="next-month">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="day">Do</div>
+                    <div class="day">Lu</div>
+                    <div class="day">Ma</div>
+                    <div class="day">Mi</div>
+                    <div class="day">Ju</div>
+                    <div class="day">Vi</div>
+                    <div class="day">Sa</div>
+                    <!-- Calendar days will be dynamically generated -->
+                </div>
+                <p id="streak">Días en racha: 0</p>
+            </div>
+            <section class="record">
+                <h1>Tu record</h1>
+                <div class="record-container">
+                    <img src="/Responsive_Habitale/Logos/Logo_trophy.svg" alt="Trophy Icon" class="trophy-icon">
+                    <div class="record-streak">
+                        <span>0</span>
+                        <p>Días</p>
+                    </div>
+                </div>
+                <p class="record-description">Tu racha más larga hasta ahora</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo"></div>
+            <div class="contact-info1">
+                <p>Av. Cra 68 #110a - 70</p>
+                <div class="logoUbicacion"></div>
+            </div>
+            <div class="contact-info2">
+                <p>HabiTale@gmail.com</p>
+                <div class="logoCorreo"></div>
+            </div>
+            <div class="linea"></div>
+            <div class="copyright">
+                COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+            <div class="logoMini"></div>
+        </div>
+    </footer>
+    <script src="js/progreso.js"></script>
+</body>
+</html>
