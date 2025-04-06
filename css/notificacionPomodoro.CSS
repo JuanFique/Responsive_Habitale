@@ -75,6 +75,8 @@ footer {
     color: var(--white);
     padding: 40px 0;
     text-align: center;
+    margin-top: auto;
+    position: relative;
     width: 100%; /* Asegurar que ocupe todo el ancho */
     flex-shrink: 0; /* Evitar que se reduzca */
 }
@@ -289,7 +291,7 @@ footer {
     top: 0;
     left: -330px; /* Hidden by default */
     width: 330px;
-    height: 43%;
+    height: 50%;
     border-radius: 0 30px 30px 0; /* Rounded corners on the left side */
     background-color: var(--primary-blue);
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
