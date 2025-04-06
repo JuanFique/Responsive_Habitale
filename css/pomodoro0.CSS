@@ -1,4 +1,13 @@
-/* Global Styles */
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #1589E6;
+    --purple-background: #6B15E6;
+    --avatar-box-color: #480BA0;
+    --white: #FFFFFF;
+    --text-light: #FFFDFD;
+    --light-blue: #156EE6;
+    --purple: #6B15E6;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,62 +16,58 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: space-between; /* Distribuir contenido uniformemente */
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-/* Header Styles */
+/* Header styles */
 header {
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
     height: 76px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 100%;
     display: flex;
     align-items: center;
+    padding: 0 50px;
+    position: relative;
+    gap: 10px;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.logo-img {
-    height: 41px;
 }
 
 .logo {
-    color: #1545E6;
-    font-family: 'Rubik One', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    background-color: white;
-    padding: 0 8px;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    height: 60px;
 }
 
-/* Main Banner */
-.main-banner {
+/* Banner styles */
+.banner {
+    width: 930px;
+    height: 92px;
     background-color: #2B00AB;
-    padding: 25px 20px;
-    margin-top: 76px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-    width: 930px;
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0 40px 0;
+    padding: 0 8px;
+    margin-left: 0; /* Asegura que el margen izquierdo sea 0 */
+    align-self: flex-start; /* Alinea el banner completamente a la izquierda */
 }
 
-.banner-title {
+.banner-text {
     color: rgba(255, 255, 255, 0.78);
     font-size: 32px;
     font-weight: 600;
@@ -70,126 +75,102 @@ header {
     text-align: center;
 }
 
-/* Content Container */
-.content-container {
-    background-color: #1587E6;
-    padding-top: 40px;
-    padding-bottom: 60px;
+/* Main content styles */
+main {
+    flex-grow: 1; /* Hacer que el contenido principal ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente el contenido principal */
+    align-items: center;
+    width: 100%;
 }
 
-/* Section Styles */
-.section {
-    max-width: 1000px;
-    margin: 0 auto 40px;
-    background-color: rgba(255, 255, 255, 0.33);
-    border-radius: 8px;
-    overflow: hidden;
+.section-container {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #64acec;
+    margin-bottom: 20px;
 }
 
 .section-header {
+    width: 100%;
+    height: 108px;
     background-color: #2715E6;
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
 }
 
 .section-title {
     color: white;
     font-size: 40px;
     font-weight: 600;
-    line-height: 1.2;
-}
-
-.section-content {
-    padding: 30px;
-}
-
-.section-text {
-    font-size: 20px;
     line-height: 34.5px;
-    margin-bottom: 20px;
-    color: black;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 60px;
 }
 
 .image-container {
-    text-align: center;
-    margin-bottom: 30px;
+    margin: 20px 0;
 }
 
 .section-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 509px;
+    height: 382px;
 }
 
-/* Benefits List */
-.benefits-list {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-.benefits-list li {
+.text-content {
+    padding: 20px 60px;
+    color: black;
     font-size: 20px;
+    font-weight: 400;
     line-height: 34.5px;
+}
+
+.text-content p {
     margin-bottom: 20px;
-    position: relative;
-    padding-left: 15px;
 }
 
-.benefits-list li::before {
-    content: "•";
-    position: absolute;
-    left: -5px;
-    color: #1545E6;
-    font-weight: bold;
-}
-
-/* Application Scenarios */
-.application-scenarios {
-    margin-top: 30px;
-}
-
-.scenario {
-    margin-bottom: 30px;
-}
-
-.scenario h3 {
-    font-size: 22px;
-    color: #1545E6;
-    margin-bottom: 10px;
-}
-
-.scenario p {
-    font-size: 20px;
-    line-height: 34.5px;
-}
-
-/* CTA Button */
+/* CTA Button styles */
 .cta-container {
-    text-align: center;
-    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
 }
 
 .cta-button {
-    display: inline-block;
+    width: 260px;
+    height: 82px;
     background-color: #6B15E6;
     color: white;
     font-size: 32px;
     font-weight: 400;
-    padding: 15px 40px;
+    border: none;
     border-radius: 50px;
-    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #5412b9;
+    background-color: #5710c2;
 }
 
-/* Footer Styles */
+/* Footer styles */
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 40px 20px;
-    color: #FFFDFD;
+    color: var(--text-light);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .footer-content {
@@ -197,106 +178,161 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
 }
 
-.footer-logo h2 {
-    color: #1545E6;
-    font-family: 'Rubik One', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    background-color: white;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 5px;
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
 }
 
-.footer-info {
+.contact-info1 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.contact-info p,
+.copyright p {
     font-size: 14px;
     font-weight: 300;
 }
-
-.icon {
-    font-size: 16px;
+.copyright:hover {
+    font-weight: bold;
 }
 
-.copyright {
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 20px;
+.text-content ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34.5px;
+    margin-left: 30px;
+    padding: 10px;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .main-banner {
+@media (max-width: 400px) {
+
+    .banner {
         width: 100%;
-    }
-    
-    .section-title {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 768px) {
-    .section-content {
-        padding: 20px;
-    }
-    
-    .section-text, .benefits-list li, .scenario p {
-        font-size: 18px;
-        line-height: 30px;
-    }
-    
-    .scenario h3 {
-        font-size: 20px;
-    }
-    
-    .cta-button {
-        font-size: 28px;
-        padding: 12px 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-container {
-        padding: 0 10px;
-    }
-    
-    .logo {
+        height: auto;
         font-size: 24px;
+        padding: 10px;
     }
-    
-    .banner-title {
-        font-size: 24px;
-        line-height: 28px;
+
+    .section-container {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
     }
-    
-    .section-title {
-        font-size: 28px;
-    }
-    
-    .section-text, .benefits-list li, .scenario p {
+
+    .text-content {
+        padding: 10px;
         font-size: 16px;
-        line-height: 28px;
     }
-    
+
+    .section-title {
+        font-size: 28px;
+    }
+
     .cta-button {
-        font-size: 22px;
-        padding: 10px 25px;
+        width: 200px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 12px;
     }
 }
+
