@@ -30,17 +30,16 @@ body {
     padding: 0 110px;
 }
 
-.logo {
+logo {
     color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    background-color: white;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-
+     font-size: 32px;
+     font-family: 'Rubik One', sans-serif;
+     font-weight: 400;
+     background-color: rgba(255, 255, 255, 0);
+     padding: 0 10px;
+     border-radius: 4px;
+ }
+ 
 /* Main Content */
 .main-content {
     flex: 1;
@@ -87,6 +86,22 @@ body {
     background-color: #13b5cf;
 }
 
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
 /* Footer */
 .footer {
     width: 100%;
@@ -99,29 +114,59 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .footer-logo {
     color: #1545E6;
-    font-size: 32px;
+    font-size: 20px;
     font-family: 'Rubik One', sans-serif;
     font-weight: 400;
-    text-align: left;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     display: inline-block;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    text-align: left; /* Alineación izquierda */
+}
+.logoMini {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 300px;
+    height: 30px;
+    display: block;
+    margin: 0 auto; /* Centrado horizontal */
+    margin-top: 20px;
 }
 
 .footer-contact {
     margin-bottom: 20px;
 }
 
+.footer-content p:hover {
+    font-weight: bold;
+}
+
 .contact-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+.contact-item:hover .icon {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.contact-item:hover .contact-text {
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .icon {
@@ -159,24 +204,30 @@ body {
     font-weight: 300;
     text-align: center;
     margin-top: 50px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header, .footer-content {
+.copyright:hover {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .footer-content {
         padding: 0 20px;
     }
-    
-    .success-message {
-        font-size: 24px;
+
+    .footer-content .logo {
+        width: 200px;
+        height: 60px;
     }
-    
-    .action-button {
-        width: 250px;
-        font-size: 20px;
-    }
-    
-    .copyright {
-        margin-top: 30px;
+
+    .logoUbicacion,
+    .logoCorreo,
+    .logoMini {
+        width: 200px;
     }
 }
