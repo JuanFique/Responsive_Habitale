@@ -152,24 +152,33 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Save Button */
-.save-button {
-    margin-top: 20px;
-    padding: 10px 30px;
-    background: #15C9E6;
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+.next-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
 }
 
-.save-button:hover {
-    background: #13b7d3;
+.next-button {
+    background-color: #15C9E6;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+.next-button:hover {
+    background-color: #12b5cf;
+}
+
 
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);

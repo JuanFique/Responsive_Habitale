@@ -110,7 +110,6 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0 32px;
-    text-decoration: none;
 }
 
 .task-item:hover {

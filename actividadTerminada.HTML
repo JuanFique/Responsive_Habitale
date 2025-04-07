@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/actividadTerminada.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Rubik+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
@@ -21,46 +22,33 @@
             <div class="success-message">¡LOGRASTE TERMINAR LA TAREA DE HOY!</div>
             
             <div class="action-button-container">
-                <button class="action-button">
+                <button class="action-button" onclick="location.href='Habitos_Estudio.html'">
                     ¡Volver!
                 </button>
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer">
+        <footer>
             <div class="footer-content">
-
-                <!-- Logo principal -->
-                <div class="footer-logo">
-                    <img src="Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo-footer">
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
                 </div>
-
-                <!-- Datos de contacto -->
-                <div class="footer-contact">
-                    <div class="contact-item">
-                        <img src="Logos/Logo_lugar.svg" alt="Ubicación" class="logo-footer">
-                        <div class="contact-text">Av. Cra 68 #110a - 70</div>
-                    </div>
-
-                    <div class="contact-item">
-                        <img src="Logos/Logo_correo.svg" alt="Correo" class="logo-footer">
-                        <div class="contact-text">HabiTale@gmail.com</div>
-                    </div>
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
                 </div>
-
-                <!-- Línea decorativa opcional -->
-                <div class="linea"></div>
-
-                <!-- Copyright -->
+                <div class="linea">
+                    <p></p>
+                </div>
                 <div class="copyright">
                     COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
                 </div>
-
-               
-                <img src="Logos/Logo_mini.svg" alt="Mini Logo" class="logoMini">
-            </div>
-            </div>
+                <div class="logoMini"></div>
+        </div>
         </footer>
-    </div>
+    <script src="js/actividadTerminada.js"></script>
+    </body>
+</html>
     

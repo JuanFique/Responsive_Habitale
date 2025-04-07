@@ -11,12 +11,3 @@ overlay.addEventListener('click', () => {
     sidebar.classList.remove('open');
     overlay.classList.remove('active');
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const avatarContainer = document.getElementById("current-avatar");
-    const selectedAvatar = localStorage.getItem("selectedAvatar");
-
-    if (selectedAvatar) {
-        avatarContainer.src = selectedAvatar;
-    }
-});

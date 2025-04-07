@@ -12,7 +12,7 @@
   <header class="header">
     <div class="container">
       <nav class="navbar">
-        <a href="#" class="back-button">
+        <a href="ListaTareasP.html" class="back-button">
           <span class="back-arrow">←</span>
         </a>
         <div class="logo">
@@ -39,6 +39,9 @@
         <div class="time-display">25 min</div>
       </div>
 
+      <button class="start-button">Iniciar Pomodoro</button>
+      <button class="skip-button">Saltar</button>
+
       <div class="tomato-container">
         <img src="Images/Tomate.png" alt="Tomate" class="tomato-img" />
       </div>
@@ -50,135 +53,34 @@
         <h2 class="document-title">Sube tus documentos</h2>
 
         <div class="upload-form">
-          <label for="file-upload" class="custom-file-upload">
-            Seleccionar archivos
-          </label>
-          <input id="file-upload" type="file" name="documents" multiple accept="application/pdf" />
+          <input id="pdf-upload" type="file" accept="application/pdf" />
         </div>
 
-        <div class="pdf-viewer-container" id="pdf-viewer-container"></div>
-
-        <div class="pdf-list" id="pdf-list">
-          <h3>Documentos subidos:</h3>
-          <ul id="pdf-names-list"></ul>
+        <div class="pdf-preview-wrapper">
+          <iframe id="pdf-iframe" class="pdf-viewer" src="" frameborder="0"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
-      <div class="logo"></div>
-
-      <div class="contact-info1">
-        <p>Av. Cra 68 #110a - 70</p>
-        <div class="logoUbicacion"></div>
-      </div>
-
-      <div class="contact-info2">
-        <p>HabiTale@gmail.com</p>
-        <div class="logoCorreo"></div>
-      </div>
-
-      <div class="linea"><p></p></div>
-
-      <div class="copyright">
-        COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
-      </div>
-
-      <div class="logoMini"></div>
+        <div class="logo"></div>
+        <div class="contact-info1">
+            <p>Av. Cra 68 #110a - 70</p>
+            <div class="logoUbicacion"></div>
+        </div>
+        <div class="contact-info2">
+            <p>HabiTale@gmail.com</p>
+            <div class="logoCorreo"></div>
+        </div>
+        <div class="linea"></div>
+        <div class="copyright">
+            COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+        </div>
+        <div class="logoMini"></div>
     </div>
-  </footer>
-
-  <!-- SCRIPT para manejo de PDFs -->
-  <script>
-    const listContainer = document.getElementById('pdf-names-list');
-    const storedFiles = [];
-  
-    document.getElementById('file-upload').addEventListener('change', function (event) {
-      const files = event.target.files;
-  
-      if (files.length === 0) {
-        alert("No se seleccionaron archivos.");
-        return;
-      }
-  
-      Array.from(files).forEach(file => {
-        if (file.type === 'application/pdf') {
-          const fileURL = URL.createObjectURL(file);
-          storedFiles.push({ name: file.name, url: fileURL });
-  
-          // Crear ítem de lista
-          const listItem = document.createElement('li');
-          listItem.classList.add('pdf-list-item');
-          listItem.style.display = 'flex';
-          listItem.style.flexDirection = 'column';
-          listItem.style.alignItems = 'flex-start'; // Alinear todo a la izquierda
-          listItem.style.marginBottom = '20px';
-          listItem.style.width = '100%';
-  
-          // Enlace para previsualizar
-          const previewLink = document.createElement('a');
-          previewLink.href = "#";
-          previewLink.textContent = file.name;
-          previewLink.classList.add('pdf-preview-link');
-          previewLink.style.textAlign = 'left';
-          previewLink.style.color = '#007bff';
-          previewLink.style.textDecoration = 'underline';
-          previewLink.style.cursor = 'pointer';
-          previewLink.style.fontWeight = '500';
-  
-          // Contenedor de previsualización
-          const previewWrapper = document.createElement('div');
-          previewWrapper.classList.add('pdf-preview-wrapper');
-          previewWrapper.style.display = 'none';
-          previewWrapper.style.marginTop = '10px';
-          previewWrapper.style.width = '100%';
-  
-          // Botón de cerrar
-          const closeButton = document.createElement('button');
-          closeButton.textContent = '✖';
-          closeButton.classList.add('close-preview-btn');
-          closeButton.style.marginBottom = '10px';
-          closeButton.style.cursor = 'pointer';
-          closeButton.style.background = 'none';
-          closeButton.style.border = 'none';
-          closeButton.style.color = 'red';
-          closeButton.style.fontWeight = 'bold';
-          closeButton.style.fontSize = '16px';
-          closeButton.style.alignSelf = 'flex-end';
-  
-          closeButton.onclick = () => {
-            previewWrapper.style.display = 'none';
-          };
-  
-          const iframe = document.createElement('iframe');
-          iframe.src = fileURL;
-          iframe.style.width = '100%';
-          iframe.style.height = '600px';
-          iframe.style.border = 'none';
-          iframe.style.borderRadius = '10px';
-  
-          previewWrapper.appendChild(closeButton);
-          previewWrapper.appendChild(iframe);
-  
-          // Mostrar previsualización al hacer clic
-          previewLink.onclick = function (e) {
-            e.preventDefault();
-            previewWrapper.style.display = 'block';
-          };
-  
-          listItem.appendChild(previewLink);
-          listItem.appendChild(previewWrapper);
-          listContainer.appendChild(listItem);
-        } else {
-          alert(`"${file.name}" no es un archivo PDF válido.`);
-        }
-      });
-    });
-  </script>
-  
-  
+</footer>
+    <script src="js/pomodoro1.js"></script>
 </body>
 </html>

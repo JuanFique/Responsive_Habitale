@@ -157,6 +157,42 @@ body {
     margin: 0 auto; /* Centra la imagen */
 }
 
+/* Botón de inicio */
+.start-button {
+    padding: 10px 20px;
+    background-color: #15C9E6;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background-color: #13b7d3;
+}
+
+/* Botón de saltar */
+.skip-button {
+    padding: 10px 20px;
+    background-color: #E61515;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.skip-button:hover {
+    background-color: #C51212;
+}
+
 /* Footer */
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);

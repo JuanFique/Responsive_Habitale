@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitale - Lista de Tareas</title>
-    <link rel="stylesheet" href="css/ListaTareas.CSS">
+    <link rel="stylesheet" href="css/ListaTareasP.CSS">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
             <nav class="navbar">
-                <a href="agregarTarea.HTML" class="back-button">
+                <a href="agregarTareaP.html" class="back-button">
                     <span class="back-arrow">←</span> <!-- Asegurarse de que el ícono sea visible -->
                 </a>
                 <div class="logo">
@@ -22,23 +22,23 @@
         <main>
             <div class="title-section">
                 <h1>LISTA DE TAREAS</h1>
-                <p class="subtitle">Selecciona la tarea de tu lista para realizar un nuevo Estudio Activo.</p>
+                <p class="subtitle">Selecciona la tarea de tu lista para realizar un nuevo pomodoro.</p>
             </div>
 
             <div class="tasks-container">
                 <div class="task-item">
                     <p class="task-name">Estudiar parcial de biologia</p>
-                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
+                    <button class="start-btn" onclick="location.href='pomodoro1.html'">¡Comenzar!</button>
                 </div>
 
                 <div class="task-item">
                     <p class="task-name">Practicar presentacion de historia</p>
-                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
+                    <button class="start-btn" onclick="location.href='pomodoro1.html'">¡Comenzar!</button>
                 </div>
 
                 <div class="task-item">
                     <p class="task-name">Tarea de matematicas</p>
-                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
+                    <button class="start-btn" onclick="location.href='pomodoro1.html'">¡Comenzar!</button>
                 </div>
             </div>
         </main>
@@ -61,6 +61,6 @@
                 <div class="logoMini"></div>
             </div>
         </footer>
-        <script src="js/ListaTareas.js"></script>
+        <script src="js/ListaTareasP.js"></script>
 </body>
 </html>

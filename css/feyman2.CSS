@@ -16,28 +16,45 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Header styles */
 .header {
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
     height: 76px;
     display: flex;
-
+    align-items: center;
+    padding: 0 70px; 
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
+}
 
 .logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    background-color: rgba(255, 255, 255, 0);
-    padding-top: 10px;
-    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
 }
 
 /* Main Content */
@@ -171,6 +188,7 @@ h1 {
     padding: 15px 40px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .next-button:hover {
@@ -190,8 +208,21 @@ footer {
     flex-shrink: 0;
 }
 
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.copyright:hover {
+    font-weight: bold;
+}
+
 .footer-content {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -213,29 +244,34 @@ footer {
 
 .contact-info1 {
     display: flex;
-    align-items: center; /* Alineación de los elementos */
-    gap: 10px; /* Espacio entre la imagen y el texto */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.5;
-    margin-left: 20px
+    margin-left: 20px;
 }
+
 .contact-info1:hover {
     font-weight: bold;
 }
+
 .contact-info2 {
     display: flex;
-    align-items: center; /* Alineación de los elementos */
-    gap: 10px; /* Espacio entre la imagen y el texto */
-    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
     font-size: 14px;
     line-height: 1.5;
-    margin-left: 20px
+    margin-left: 20px;
 }
 
 .contact-info2:hover {
     font-weight: bold;
 }
+
 .linea {
     position: relative;
     width: 100%;
@@ -252,16 +288,8 @@ footer {
     margin: 15px 0;
 }
 
-.logoMini {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin: 0 auto;
-    display: block;
-}
-
 .logoUbicacion {
-    background-image: url('Logos/Logo_lugar.svg');
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -274,7 +302,7 @@ footer {
 }
 
 .logoCorreo {
-    background-image: url('Logos/Logo_correo.svg');
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -287,7 +315,7 @@ footer {
 }
 
 .logoMini {
-  
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -299,17 +327,7 @@ footer {
     bottom: 2px;
 }
 
-.contact-info p,
-    .copyright {
-        color: #FFFDFD;
-        font-size: 14px;
-        font-weight: 300;
-        margin-top: 40px;
-    }
 
-.copyright:hover {
-    font-weight: bold;
-}
 /* Responsive Adjustments */
 @media (max-width: 400px) {
     .footer-content {
