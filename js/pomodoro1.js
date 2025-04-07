@@ -16,16 +16,16 @@ function startPomodoro() {
             clearInterval(timer);
             if (isBreak) {
                 isBreak = false;
-                location.href = "pomodoro2.HTML"; // Redirigir a la página de descanso
+                location.href = "pomodoro2.html"; // Redirigir a la página de descanso
             } else {
                 pomodoroCount++;
                 localStorage.setItem('pomodoroCount', pomodoroCount); // Guardar en localStorage
                 if (pomodoroCount >= 4) {
                     localStorage.setItem('pomodoroCount', 0); // Reiniciar el conteo de pomodoros
-                    location.href = "actividadTerminada.HTML"; // Redirigir al finalizar
+                    location.href = "actividadTerminada.html"; // Redirigir al finalizar
                 } else {
                     isBreak = true;
-                    location.href = "pomodoro2.HTML"; // Redirigir a la página de descanso
+                    location.href = "pomodoro2.html"; // Redirigir a la página de descanso
                 }
             }
         }
@@ -42,16 +42,16 @@ function skipPomodoro() {
     clearInterval(timer);
     if (isBreak) {
         isBreak = false;
-        location.href = "pomodoro2.HTML"; // Redirigir a la página de descanso
+        location.href = "pomodoro2.html"; // Redirigir a la página de descanso
     } else {
         pomodoroCount++;
         localStorage.setItem('pomodoroCount', pomodoroCount); // Guardar en localStorage
         if (pomodoroCount >= 4) {
             localStorage.setItem('pomodoroCount', 0); // Reiniciar el conteo de pomodoros
-            location.href = "actividadTerminada.HTML"; // Redirigir al finalizar
+            location.href = "actividadTerminada.html"; // Redirigir al finalizar
         } else {
             isBreak = true;
-            location.href = "pomodoro2.HTML"; // Redirigir a la página de descanso
+            location.href = "pomodoro2.html"; // Redirigir a la página de descanso
         }
     }
 }

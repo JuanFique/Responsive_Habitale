@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     closePopup.addEventListener("click", () => {
         popup.style.display = "none";
         overlay.style.display = "none";
-        window.location.href = "login.HTML"; // Redirect to login page
+        window.location.href = "login.html"; // Redirect to login page
     });
 
     // Removed overlay click event

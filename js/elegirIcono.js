@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", (event) => {
             const avatarImage = event.target.closest(".avatar-option").querySelector("img").src;
             localStorage.setItem("selectedAvatar", avatarImage);
-            window.location.href = "editarPerfil.HTML";
+            window.location.href = "editarPerfil.html";
         });
     });
 });
