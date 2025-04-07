@@ -8,23 +8,53 @@
     <link rel="stylesheet" href="css/Habitos_Estudio.CSS">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">HABITALE</div>
-        <div class="cta-button">
-            <img src="https://placehold.co/40x40" alt="Icon">
-            <span>¡Hazte Guerrero!</span>
-            <img src="https://placehold.co/40x40" alt="Icon">
+    <header>
+        <div class="menu-icon" id="menu-icon">
+            <img src="/Responsive_Habitale/Logos/Menu.svg" alt="Menu Icon">
+        </div>
+        <div class="logo-container">
+            <img src="/Responsive_Habitale/Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
         </div>
     </header>
 
-    <div class="container">
+    <div class="sidebar" id="sidebar">
+        <div class="menu-header">
+            <img src="/Responsive_Habitale/Logos/Logo_user.svg" alt="User Profile">
+            <div class="user-info">
+                <span>Usuario</span>
+                <small>Usuario@gmail.com</small>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_manzana.svg" alt="Perfil Icon">
+                <a href="progreso.html">Perfil</a>
+            </li>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_coins.svg" alt="Hábitos Icon">
+                <a href="Habitos_Estudio.HTML">Hábitos</a>
+            </li>
+            <li>
+                <img src="/Responsive_Habitale/Logos/Logo_grafica.svg" alt="Notificaciones Icon">
+                <a href="notificaciones.HTML">Notificaciones</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container-title">
         <div class="study-habits-title">
             <h1>HÁBITOS DE ESTUDIO</h1>
         </div>
+    </div>
+    
+    
 
+    <div class="container">
         <section class="study-method">
             <div class="study-method-image">
-                <img src="https://placehold.co/329x254" alt="Técnica Pomodoro">
+                <img src="Images/Imagen_tecnicaPomodoro.svg" alt="Técnica Pomodoro">
             </div>
             <div class="study-method-content">
                 <h2 class="study-method-title">Técnica Pomodoro</h2>
@@ -32,15 +62,15 @@
                     La técnica Pomodoro es un método de gestión del tiempo que ayuda a mejorar la concentración y la productividad dividiendo el trabajo en intervalos cortos de alta concentración, seguidos de breves descansos.
                 </p>
                 <div class="study-method-actions">
-                    <a href="#" class="btn">Más información</a>
-                    <a href="#" class="btn">Ir a la rutina</a>
+                    <a href="pomodoro0.HTML" class="btn">Más información</a>
+                    <a href="agregarTareaP.html" class="btn">Ir a la rutina</a>
                 </div>
             </div>
         </section>
 
         <section class="study-method">
             <div class="study-method-image">
-                <img src="https://placehold.co/329x254" alt="Estudio Activo">
+                <img src="Images/Imagen_estudioActivo.svg" alt="Estudio Activo">
             </div>
             <div class="study-method-content">
                 <h2 class="study-method-title">Estudio Activo</h2>
@@ -48,15 +78,15 @@
                     Este método promueve un aprendizaje profundo al interactuar activamente con la información en lugar de solo leer o memorizar. Incluye estrategias como tomar notas, hacer preguntas y aplicar lo aprendido en ejercicios prácticos.
                 </p>
                 <div class="study-method-actions">
-                    <a href="#" class="btn">Más información</a>
-                    <a href="#" class="btn">Ir a la rutina</a>
+                    <a href="estudioActivo0.HTML" class="btn">Más información</a>
+                    <a href="agregarTarea.HTML" class="btn">Ir a la rutina</a>
                 </div>
             </div>
         </section>
 
         <section class="study-method">
             <div class="study-method-image">
-                <img src="https://placehold.co/329x254" alt="Técnica Feynman">
+                <img src="Images/Imagen_tecnicaFeynman.svg" alt="Técnica Feynman">
             </div>
             <div class="study-method-content">
                 <h2 class="study-method-title">Técnica Feynman</h2>
@@ -64,20 +94,33 @@
                     Este método consiste en explicar un concepto con palabras simples, como si lo enseñaras a un niño de 6 años. Si no puedes explicarlo claramente, significa que necesitas reforzar tu comprensión.
                 </p>
                 <div class="study-method-actions">
-                    <a href="#" class="btn">Más información</a>
-                    <a href="#" class="btn">Ir a la rutina</a>
+                    <a href="feyman0.HTML" class="btn">Más información</a>
+                    <a href="agregarTareaF.html" class="btn">Ir a la rutina</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer class="footer">
-        <div class="logo">HABITALE</div>
-        <div class="footer-contact">Av. Cra 68 #110a - 70</div>
-        <div class="footer-contact">HabiTale@gmail.com</div>
-        <div class="footer-copyright">
-            COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+    <footer>
+        <div class="footer-content">
+            <div class="logo"></div>
+            <div class="contact-info1">
+                <p>Av. Cra 68 #110a - 70</p>
+                <div class="logoUbicacion"></div>
+            </div>
+            <div class="contact-info2">
+                <p>HabiTale@gmail.com</p>
+                <div class="logoCorreo"></div>
+            </div>
+            <div class="linea">
+                <p></p>
+            </div>
+            <div class="copyright">
+                COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+            <div class="logoMini"></div>
         </div>
     </footer>
+    <script src="js/Habitos_Estudio.js"></script>
 </body>
 </html>

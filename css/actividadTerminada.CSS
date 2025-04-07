@@ -1,15 +1,28 @@
-/* Reseteo básico */
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #1589E6;
+    --gradient-blue: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    --purple-background: #6B15E6;
+    --warrior-button-blue: #2715E6;
+    --white: #FFFFFF;
+    --text-light: #FFFDFD;
+    --input-text-color: rgba(255, 255, 255, 0.73);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: 'Rubik', sans-serif;
-    overflow-x: hidden;
+    background: var(--gradient-blue);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido se distribuya dejando el footer abajo */
+    color: var(--white);
 }
 
 .container {
@@ -30,17 +43,16 @@ body {
     padding: 0 110px;
 }
 
-.logo {
+logo {
     color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    text-align: center;
-    background-color: white;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-
+     font-size: 32px;
+     font-family: 'Rubik One', sans-serif;
+     font-weight: 400;
+     background-color: rgba(255, 255, 255, 0);
+     padding: 0 10px;
+     border-radius: 4px;
+ }
+ 
 /* Main Content */
 .main-content {
     flex: 1;
@@ -87,96 +99,168 @@ body {
     background-color: #13b5cf;
 }
 
-/* Footer */
-.footer {
+.linea {
+    position: relative;
     width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo */
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px 0;
-    border-top: 1px solid #15C9E6;
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    flex-shrink: 0; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 5px 0;
+}
+
+.copyright:hover {
+    font-weight: bold;
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 110px;
-}
-
-.footer-logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-    background-color: white;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 0 50px;
 }
 
-.footer-contact {
-    margin-bottom: 20px;
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
 }
 
-.contact-item {
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.contact-info1 {
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.location-icon {
-    width: 10.38px;
-    height: 15.31px;
-    background-color: white;
-}
-
-.email-icon {
-    width: 16px;
-    height: 12.25px;
-    background-color: white;
-}
-
-.contact-text {
-    color: #FFFDFD;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
     font-size: 14px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.copyright {
-    color: #FFFDFD;
-    font-size: 14px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 50px;
+.contact-info2:hover {
+    font-weight: bold;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header, .footer-content {
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .footer-content {
         padding: 0 20px;
     }
-    
-    .success-message {
-        font-size: 24px;
+
+    .footer-content .logo {
+        width: 200px;
+        height: 60px;
     }
-    
-    .action-button {
-        width: 250px;
-        font-size: 20px;
-    }
-    
-    .copyright {
-        margin-top: 30px;
+
+    .logoUbicacion,
+    .logoCorreo,
+    .logoMini {
+        width: 200px;
     }
 }

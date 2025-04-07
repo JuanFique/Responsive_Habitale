@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closePopup.addEventListener("click", () => {
         popup.style.display = "none";
         overlay.style.display = "none";
-        window.location.href = "index.html"; // Redirigir a la página principal
+        window.location.href = "progreso.html"; // Redirigir a la página principal
     });
 });

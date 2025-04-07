@@ -15,25 +15,47 @@ body {
 }
 
 /* Header Styles */
-header {
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
     height: 76px;
     display: flex;
     align-items: center;
-    padding: 0 110px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 0 70px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
 }
 
 .logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    background-color: white;
-    padding: 0 10px;
-    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
 }
 
 /* Main Content */
@@ -233,82 +255,163 @@ h1 {
     margin-top: 20px;
     padding-left: 20px;
 }
-
-/* Next Button */
-.next-button {
-    margin: 30px 0;
-    width: 100%;
+.next-button-container {
     display: flex;
     justify-content: flex-end;
-    padding-right: 10%;
+    margin-top: 40px;
 }
 
-button {
+.next-button {
     background-color: #15C9E6;
     color: white;
     font-size: 24px;
     font-weight: 400;
+    border: none;
     padding: 10px 30px;
     border: none;
     border-radius: 50px;
+    padding: 15px 40px;
     cursor: pointer;
-    font-family: 'Rubik', sans-serif;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
+
+.next-button:hover {
+    background-color: #12b5cf;
+}
+
 
 /* Footer Styles */
+
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px 0;
+    color: var(--text-light);
+    padding: 40px 0;
+    text-align: center;
     margin-top: auto;
-}
-
-.footer-content {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.footer-logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    background-color: white;
-    width: fit-content;
-    padding: 0 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .contact-info {
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
 
-.address, .email {
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.copyright:hover {
+    font-weight: bold;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
     margin-bottom: 15px;
-}
-
-.icon {
     font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.address span, .email span {
-    color: #FFFDFD;
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
     font-size: 14px;
-    font-weight: 300;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.copyright {
-    color: #FFFDFD;
-    font-size: 14px;
-    font-weight: 300;
-    margin-top: 40px;
+.contact-info2:hover {
+    font-weight: bold;
 }
 
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     header {

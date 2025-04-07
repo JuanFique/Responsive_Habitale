@@ -4,53 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HABITALE - Pomodoro</title>
-    <link rel="stylesheet" href="css/actividadTerminada.CSS">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/actividadTerminada.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Rubik+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <div class="logo">HABITALE</div>
+            <img src="Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
         </header>
         
         <!-- Main Content -->
         <main class="main-content">
-            <div class="success-message">¡LOGRASTE TERMINAR EL POMODORO!</div>
+            <div class="success-message">¡LOGRASTE TERMINAR LA TAREA DE HOY!</div>
             
             <div class="action-button-container">
-                <button class="action-button">
-                    ¡Comenzar un nuevo pomodoro!
+                <button class="action-button" onclick="location.href='Habitos_Estudio.html'">
+                    ¡Volver!
                 </button>
             </div>
         </main>
-        
-        <!-- Footer -->
-        <footer class="footer">
+
+        <footer>
             <div class="footer-content">
-                <div class="footer-logo">HABITALE</div>
-                
-                <div class="footer-contact">
-                    <div class="contact-item">
-                        <div class="icon">
-                            <div class="location-icon"></div>
-                        </div>
-                        <div class="contact-text">Av. Cra 68 #110a - 70</div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="icon">
-                            <div class="email-icon"></div>
-                        </div>
-                        <div class="contact-text">HabiTale@gmail.com</div>
-                    </div>
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
                 </div>
-                
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
+                </div>
+                <div class="linea">
+                    <p></p>
+                </div>
                 <div class="copyright">
                     COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
                 </div>
-            </div>
+                <div class="logoMini"></div>
+        </div>
         </footer>
-    </div>
-</body>
+    <script src="js/actividadTerminada.js"></script>
+    </body>
 </html>
+    

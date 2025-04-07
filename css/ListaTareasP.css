@@ -110,7 +110,6 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 0 32px;
-    text-decoration: none;
 }
 
 .task-item:hover {
@@ -139,7 +138,6 @@ h1 {
     cursor: pointer;
     text-align: center;
     display: inline-block;
-    text-decoration: none;
 }
 .start-btn:hover {
     background-color: #0FA3D1;

@@ -10,49 +10,72 @@
 <body>
     <div class="container">
         <!-- Header -->
-        <header class="header">
-            <button class="menu-button">
-                <span class="menu-icon"></span>
-            </button>
-            <h1 class="logo-text">HABITALE</h1>
+        <header>
+            <div class="menu-icon" id="menu-icon">
+                <img src="/Responsive_Habitale/Logos/Menu.svg" alt="Menu Icon">
+            </div>
+            <div class="logo-container">
+                <img src="/Responsive_Habitale/Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
+            </div>
         </header>
 
         <!-- Main Content -->
         <main>
             <h2 class="page-title">Notificaciones</h2>
-            
             <div class="content-box">
                 <div class="notification-card">
                     <p class="notification-text">Es hora de un nuevo pomodoro!</p>
-                    <button class="action-button">ABRIR</button>
+                    <button class="action-button" onclick="location.href='notificacionPomodoro.html'">ABRIR</button>
                 </div>
-                <!-- El espacio para más notificaciones queda disponible -->
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h1 class="logo-text">HABITALE</h1>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon address-icon"></div>
-                        <p>Av. Cra 68 #110a - 70</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon email-icon"></div>
-                        <p>HabiTale@gmail.com</p>
-                    </div>
-                </div>
-                
-                <div class="copyright">
-                    <p>COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.</p>
+        <div class="sidebar" id="sidebar">
+            <div class="menu-header">
+                <img src="/Responsive_Habitale/Logos/Logo_user.svg" alt="User Profile">
+                <div class="user-info">
+                    <span>Usuario</span>
+                    <small>Usuario@gmail.com</small>
                 </div>
             </div>
+            <ul>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_manzana.svg" alt="Perfil Icon">
+                    <a href="progreso.html">Perfil</a>
+                </li>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_coins.svg" alt="Hábitos Icon">
+                    <a href="Habitos_Estudio.HTML">Hábitos</a>
+                </li>
+                <li>
+                    <img src="/Responsive_Habitale/Logos/Logo_grafica.svg" alt="Notificaciones Icon">
+                    <a href="notificaciones.HTML">Notificaciones</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="overlay" id="overlay"></div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
+                </div>
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
+                </div>
+                <div class="linea">
+                    <p></p>
+                </div>
+                <div class="copyright">
+                    COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+                </div>
+                <div class="logoMini"></div>
+            </div>
         </footer>
-    </div>
+        <script src="js/notificaciones.js"></script>
 </body>
 </html>

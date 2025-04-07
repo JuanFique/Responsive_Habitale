@@ -29,3 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
         navOptions.classList.toggle("open");
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+        const planEscuderoBtn = document.getElementById("planEscudero-btn");
+        const planGuerreroBtn = document.getElementById("planGuerrero-btn");
+
+        planGuerreroBtn.addEventListener("click", () => {
+            window.location.href = "registro.html";
+        });
+
+        planEscuderoBtn.addEventListener("click", () => {
+            window.location.href = "registro.html";
+        });
+    });
