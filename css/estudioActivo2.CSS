@@ -16,41 +16,61 @@ body {
 
 /* Header */
 .header {
-    width: 100%;
-    height: 76px;
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
     display: flex;
     align-items: center;
-    padding: 0 110px;
+    padding: 0 70px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
 }
 
 .logo {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    color: white;
-    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
 }
 
 /* Main Content */
 .main-container {
-    flex: 1;
-    padding: 40px 100px;
+    padding: 20px 50px; 
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center; 
 }
 
 /* Note Container */
 .note-container {
-    background: #6B15E6;
+    background: #6B15E6; 
     border-radius: 20px;
-    width: 100%;
-    height: auto;
+    width: 90%; 
+    max-width: 800px; 
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 /* Note Title */
@@ -60,25 +80,28 @@ body {
 }
 
 .note-title h1 {
-    font-size: 52px;
+    font-size: 36px; 
     font-weight: 500;
+    text-align: center;
+    margin: 0;
 }
 
 /* Dividers */
 .note-divider {
-    height: 5px;
-    background: #0AFC93;
+    height: 4px; 
+    background: #0AFC93; 
     width: 100%;
 }
 
 .column-divider {
-    width: 5px;
-    background: #0AFC93;
+    width: 4px; 
+    background: #0AFC93; 
 }
 
 /* Note Content */
 .note-content {
     display: flex;
+    justify-content: space-between;
     flex: 1;
     min-height: 60vh;
 }
@@ -88,10 +111,11 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center; 
 }
 
 .column h2 {
-    font-size: 48px;
+    font-size: 28px; 
     font-weight: 500;
     text-align: center;
     margin-bottom: 20px;
@@ -104,7 +128,7 @@ body {
 }
 
 .note-summary h2 {
-    font-size: 48px;
+    font-size: 28px; 
     font-weight: 500;
     text-align: center;
     margin-bottom: 20px;
@@ -118,6 +142,8 @@ body {
     padding: 15px;
     overflow-y: auto;
     background-color: rgba(255, 255, 255, 0.05);
+    width: 100%; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .content-area:focus {
@@ -128,82 +154,150 @@ body {
 
 /* Save Button */
 .save-button {
-    position: absolute;
-    bottom: 40px;
-    right: 100px;
+    margin-top: 20px;
+    padding: 10px 30px;
     background: #15C9E6;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 34.5px;
-    padding: 15px 40px;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .save-button:hover {
     background: #13b7d3;
 }
 
-/* Footer */
-.footer {
-    width: 100%;
+footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 110px;
-}
-
-.footer-logo {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
+    color: var(--text-light);
+    padding: 40px 0; /* Match footer padding */
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Evitar que el footer se reduzca */
 }
 
 .contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.copyright:hover {
+    font-weight: bold;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
 }
 
-.address, .email {
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-    color: #FFFDFD;
+    margin-bottom: 15px;
     font-size: 14px;
-    font-weight: 300;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.icon {
-    font-size: 16px;
+.contact-info1:hover {
+    font-weight: bold;
 }
 
-.copyright {
-    color: #FFFDFD;
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
     font-size: 14px;
-    font-weight: 300;
-    margin-top: 20px;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
 /* Media Queries */
 @media (max-width: 1024px) {
     .main-container {
@@ -257,7 +351,7 @@ body {
     }
     
     .header {
-        padding: 0 20px;
+        padding: 10px 20px;
     }
     
     .column h2, .note-summary h2 {
