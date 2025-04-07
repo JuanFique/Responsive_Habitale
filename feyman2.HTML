@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABITALE - Puntos a Mejorar</title>
+    <link rel="stylesheet" href="css/feyman2.CSS">  
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&family=Rubik+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="title-section">
+            <h1>PUNTOS A MEJORAR</h1>
+            <p class="subtitle">¿Tienes problemas con el tema?<br>Identifica los puntos débiles que tienes con respecto a los temas que investigaste.</p>
+        </section>
+
+        <section class="notes-container">
+            <div class="sticky-notes">
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí .."></textarea>
+                </div>
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí ..."></textarea>
+                </div>
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí ..."></textarea>
+                </div>
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí ..."></textarea>
+                </div>
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí ..."></textarea>
+                </div>
+                <div class="sticky-note">
+                    <textarea class="note-text" placeholder="Escribe aquí ..."></textarea>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario cargar el archivo PDF -->
+        <section class="upload-container">
+            <input type="file" id="pdf-upload" accept=".pdf">
+        </section>
+
+        <section class="doc-container">
+            <h2>Documento a estudiar</h2>
+            <div class="doc-content">
+                <!-- Carga de archivos PDF -->
+                <iframe id="pdf-iframe" style="width: 100%; height: 100%; border: none;"></iframe>
+            </div>
+        </section>
+
+        <div class="next-button-container">
+            <button class="next-button">¡Siguiente!</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-container-footer">
+                <img src="Logos/Logo_Habitale.svg" alt="Habitale Logo" class="logo-footer">
+            </div>
+
+            <div class="contact-info1">
+                <img src="Logos/Logo_lugar.svg" alt="Correo" class="logo-footer">
+                <p>Av. Cra 68 #110a - 70</p>
+            </div>
+
+            <div class="contact-info2">
+                <img src="Logos/Logo_correo.svg" alt="Correo" class="logo-footer">
+                <p>HabiTale@gmail.com</p>
+            </div>
+            <div class="linea">
+                <p></p>
+            </div>
+            <div class="copyright">
+                COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+            
+                <img src="Logos/Logo_mini.svg" alt="Mini Logo" class="logoMini">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/PDF.js"></script>
+</body>
+</html>
