@@ -7,84 +7,82 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    overflow-x: hidden;
-}
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    background: white;
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 150vh;
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 /* Header */
 .header {
-    width: 100%;
-    height: 76px;
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: relative;
-}
-
-.logo-container {
+    height: 76px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    padding: 0 70px; 
 }
 
-.icon {
-    width: 29px;
-    height: 41px;
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
 }
 
 .logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
 }
 
-.profile-button {
-    width: 65px;
-    height: 65px;
-    background-color: white;
-    border-radius: 15px;
+.logo-img {
+    height: 60px; 
+    width: auto;
 }
 
 /* Main Content */
 .main-content {
+    /*position: relative;*/
     flex: 1;
-    background-color: #1587E6;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.empty-state {
-    text-align: center;
     padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    /*overflow: visible;*/
 }
 
+/* Estilo del texto vacío */
 .empty-text {
     color: white;
     font-size: 32px;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    word-wrap: break-word;
+    text-align: center;
+    margin: 200px 0; 
+    line-height: 1.4;
 }
 
+/* Botón de lista de tareas */
 .task-list-button {
-    position: absolute;
-    bottom: 40px;
-    left: 143px;
+    position: relative;
+    bottom: 10px; 
+    left: -40%;
+    transform: translateX(-50%);
     width: 260px;
     height: 82px;
     background: #6B15E6;
@@ -94,18 +92,19 @@ body {
     font-size: 32px;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    line-height: 34.50px;
     cursor: pointer;
     transition: background-color 0.3s;
+    z-index: 10;
 }
 
 .task-list-button:hover {
     background: #5a10c4;
 }
 
+/* Botón de añadir tarea */
 .add-task-button {
     position: absolute;
-    bottom: 50px;
+    bottom: 35px;
     right: 100px;
     width: 65px;
     height: 65px;
@@ -117,6 +116,7 @@ body {
     align-items: center;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
+    z-index: 10;
 }
 
 .add-task-button:hover {
@@ -133,60 +133,132 @@ body {
 }
 
 /* Footer */
-.footer {
-    width: 100%;
-    height: 246px;
+footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
-    padding: 20px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo {
-    color: #1545E6;
-    font-size: 32px;
-    font-family: 'Rubik One', sans-serif;
-    font-weight: 400;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
+    padding: 40px 0; 
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; 
 }
 
 .contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.copyright:hover {
+    font-weight: bold;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
 }
 
-.address, .email {
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
-}
-
-.icon-small {
-    width: 16px;
-    height: 16px;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.contact-info p {
-    color: #FFFDFD;
+    margin-bottom: 15px;
     font-size: 14px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
+    line-height: 1.5;
+    margin-left: 20px;
 }
 
-.copyright {
-    color: #FFFDFD;
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
     font-size: 14px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 300;
-    margin-top: 35px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
 }
 
 /* Media Queries para Responsividad */

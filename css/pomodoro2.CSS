@@ -16,21 +16,42 @@ body {
 
 /* Header */
 .header {
-    width: 100%;
-    height: 50px;
-    background: #1545E6;
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 0 70px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
 }
 
 .logo {
-    color: white;
-    font-size: 24px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
 }
+
+.logo-img {
+    height: 60px; 
+    width: auto;
+}
+
 
 /* Contenido principal */
 .main-content {
@@ -129,96 +150,140 @@ body {
     left: 150px;
 }
 
-.person {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 120px;
-}
-
-.person-head {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: #FFD8B0;
-    border-radius: 50%;
-    border: 2px solid #000;
-}
-
-.person-body {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    background-color: #82A6CB;
-    border-radius: 10px;
-    border: 2px solid #000;
-}
-
-.person-arm {
-    position: absolute;
-    width: 40px;
-    height: 15px;
-    background-color: #FFD8B0;
-    border: 2px solid #000;
-    border-radius: 8px;
-}
-
-.person-arm-left {
-    top: 45px;
-    left: 10px;
-    transform: rotate(30deg);
-}
-
-.person-arm-right {
-    top: 45px;
-    right: 10px;
-    transform: rotate(-30deg);
+.person-img {
+    width: 250px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
 }
 
 /* Footer */
-.footer {
-    background: #1545E6;
-    padding: 20px;
-    margin-top: auto;
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--text-light);
+    padding: 40px 0; /* Match footer padding */
     text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Evitar que el footer se reduzca */
 }
 
-.footer-logo {
-    color: white;
-    font-size: 24px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.contact-info {
+    margin-bottom: 10px;
 }
 
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.contact-info p,
+.copyright p {
     font-size: 14px;
     font-weight: 300;
 }
-
-.address, .email {
+.copyright:hover {
+    font-weight: bold;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
 }
 
-.copyright {
-    margin-top: 15px;
-    font-size: 12px;
-    opacity: 0.8;
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
 }
 
 /* Responsive */
