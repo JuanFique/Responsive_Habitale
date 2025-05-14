@@ -13,5 +13,9 @@ function newFunction() {
             alert('Por favor, selecciona un archivo PDF.');
         }
     });
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> Developer

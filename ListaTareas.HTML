@@ -8,56 +8,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo-container">
-                <img src="back-icon.png" alt="Atrás" class="back-icon">
-                <span class="logo">HABITALE</span>
-            </div>
-        </header>
+    <header class="header">
+            <nav class="navbar">
+                <a href="agregarTarea.HTML" class="back-button">
+                    <span class="back-arrow">←</span> <!-- Asegurarse de que el ícono sea visible -->
+                </a>
+                <div class="logo">
+                    <img src="Logos/Logo_Habitale.svg" alt="Logo Habitale"/> <!-- Asegurar que la clase sea correcta -->
+            </nav>
+        </div>
+    </header>
 
         <main>
             <div class="title-section">
                 <h1>LISTA DE TAREAS</h1>
-                <p class="subtitle">Selecciona la tarea de tu lista para realizar un nuevo pomodoto.</p>
+                <p class="subtitle">Selecciona la tarea de tu lista para realizar un nuevo Estudio Activo.</p>
             </div>
 
             <div class="tasks-container">
                 <div class="task-item">
                     <p class="task-name">Estudiar parcial de biologia</p>
-                    <button class="start-btn">¡Comenzar!</button>
+                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
                 </div>
 
                 <div class="task-item">
                     <p class="task-name">Practicar presentacion de historia</p>
-                    <button class="start-btn">¡Comenzar!</button>
+                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
                 </div>
 
                 <div class="task-item">
                     <p class="task-name">Tarea de matematicas</p>
-                    <button class="start-btn">¡Comenzar!</button>
+                    <a class="start-btn" href="estudioActivo2.HTML">¡Comenzar!</a>
                 </div>
             </div>
         </main>
 
         <footer>
             <div class="footer-content">
-                <div class="brand">HABITALE</div>
-                <div class="contact-info">
-                    <div class="address">
-                        <div class="location-icon"></div>
-                        <p>Av. Cra 68 #110a - 70</p>
-                    </div>
-                    <div class="email">
-                        <div class="email-icon"></div>
-                        <p>HabiTale@gmail.com</p>
-                    </div>
+                <div class="logo"></div>
+                <div class="contact-info1">
+                    <p>Av. Cra 68 #110a - 70</p>
+                    <div class="logoUbicacion"></div>
                 </div>
+                <div class="contact-info2">
+                    <p>HabiTale@gmail.com</p>
+                    <div class="logoCorreo"></div>
+                </div>
+                <div class="linea"></div>
                 <div class="copyright">
-                    <p>COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.</p>
+                    COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
                 </div>
+                <div class="logoMini"></div>
             </div>
         </footer>
-    </div>
+        <script src="js/ListaTareas.js"></script>
 </body>
 </html>

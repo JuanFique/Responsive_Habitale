@@ -1,0 +1,408 @@
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #15C9E6;
+    --white: #FFFFFF;
+    --text-light: #FFFDFD;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(21, 135, 230, 0.80) 0%, #1545E6 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 20px;
+    width: 100%;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 200px;
+    height: 60px;
+}
+
+
+.pricing-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text-light);
+}
+
+.pricing-section h2 {
+    font-size: 68px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column; 
+    background: var(--white);
+    color: var(--primary-blue);
+    padding: 30px;
+    width: 320px;
+    height: 652px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card h3 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #15C9E6;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.pricing-card .price {
+    font-size: 46px;
+    font-weight: 100;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.pricing-card ul {
+    flex-grow: 1; /* Hacer que la lista ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente los elementos de la lista */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--primary-blue);
+    gap: 15px; /* Espacio entre los elementos de la lista */   
+}
+
+.pricing-card ul li.disabled {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.pricing-card button {
+    background: linear-gradient(96deg, #1545E6 0%, #15C9E6 100%);
+    color: var(--text-light);
+    padding: 12px 75px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.pricing-card button:hover {
+    background: linear-gradient(96deg, #1545E6 65%, #15C9E6 100%);
+}
+
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--text-light);
+    padding: 40px 0; /* Match footer padding */
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Evitar que el footer se reduzca */
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.copyright:hover {
+    font-weight: bold;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -330px;
+    width: 330px;
+    height: 50%;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--primary-blue);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    color: var(--white);
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .menu-header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.sidebar .menu-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-blue);
+}
+
+.sidebar .menu-header .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .menu-header .user-info span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.sidebar .menu-header .user-info small {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding: 10px 0;
+    border-top: 1px solid #15C9E6;
+    border-bottom: 1px solid #15C9E6;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #1B0EAC;
+}
+
+.sidebar ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+@media (max-width: 400px) {
+    .pricing-card {
+        width: 100%; /* Ajustar el ancho de las tarjetas al 100% del contenedor */
+        height: auto; /* Permitir que la altura sea dinámica */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .pricing-grid {
+        gap: 10px; /* Reducir el espacio entre las tarjetas */
+    }
+
+    .pricing-section h2 {
+        font-size: 36px; /* Reducir el tamaño del título */
+    }
+
+    .pricing-card h3 {
+        font-size: 16px; /* Reducir el tamaño del subtítulo */
+    }
+
+    .pricing-card .price {
+        font-size: 32px; /* Reducir el tamaño del precio */
+    }
+
+    .pricing-card ul {
+        font-size: 14px; /* Reducir el tamaño del texto de la lista */
+    }
+
+    .pricing-card button {
+        padding: 10px 50px; /* Ajustar el tamaño del botón */
+        font-size: 10px; /* Reducir el tamaño del texto del botón */
+    }
+}

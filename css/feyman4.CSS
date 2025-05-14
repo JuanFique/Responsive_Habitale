@@ -16,17 +16,24 @@ body {
 
 .container {
     width: 100%;
+<<<<<<< HEAD
     max-width: 1200px;
+=======
+>>>>>>> Developer
     margin: 0 auto;
     padding: 0 15px;
 }
 
+<<<<<<< HEAD
 /* Header styles */
+=======
+>>>>>>> Developer
 .header {
     background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
     height: 76px;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: center;
     position: relative;
 
@@ -40,6 +47,38 @@ body {
     background-color: rgba(255, 255, 255, 0);
     padding: 0 10px;
     border-radius: 4px;
+=======
+    padding: 0 70px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.back-arrow {
+    display: inline-block;
+    padding: 5px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 30px; 
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
+>>>>>>> Developer
 }
 
 /* Main Content */
@@ -138,6 +177,7 @@ body {
     background: #FC530A;
 }
 
+<<<<<<< HEAD
 /* Next Button */
 .next-button {
     background: #15C9E6;
@@ -162,6 +202,36 @@ footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
     color: var(--text-light);
     padding: 40px 0; /* Espaciado para el footer */
+=======
+.next-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.next-button {
+    background-color: #15C9E6;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.next-button:hover {
+    background-color: #12b5cf;
+}
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--text-light);
+    padding: 40px 0;
+>>>>>>> Developer
     text-align: center;
     margin-top: auto;
     position: relative;
@@ -169,12 +239,32 @@ footer {
     flex-shrink: 0;
 }
 
+<<<<<<< HEAD
+=======
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.copyright:hover {
+    font-weight: bold;
+}
+
+>>>>>>> Developer
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+<<<<<<< HEAD
     padding: 0 20px;
     display: flex;
+=======
+>>>>>>> Developer
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
@@ -193,6 +283,7 @@ footer {
 
 .contact-info1 {
     display: flex;
+<<<<<<< HEAD
     align-items: center; /* Alineación de los elementos */
     gap: 10px; /* Espacio entre la imagen y el texto */
     margin-bottom: 15px;
@@ -211,11 +302,39 @@ footer {
     font-size: 14px;
     line-height: 1.5;
     margin-left: 20px
+=======
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+>>>>>>> Developer
 }
 
 .contact-info2:hover {
     font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Developer
 .linea {
     position: relative;
     width: 100%;
@@ -232,6 +351,7 @@ footer {
     margin: 15px 0;
 }
 
+<<<<<<< HEAD
  .logoMini {
     background-repeat: no-repeat;
     background-size: contain;
@@ -242,6 +362,10 @@ footer {
 
 .logoUbicacion {
     background-image: url('Logos/Logo_lugar.svg');
+=======
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+>>>>>>> Developer
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -254,7 +378,11 @@ footer {
 }
 
 .logoCorreo {
+<<<<<<< HEAD
     background-image: url('Logos/Logo_correo.svg');
+=======
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+>>>>>>> Developer
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -267,7 +395,11 @@ footer {
 }
 
 .logoMini {
+<<<<<<< HEAD
   
+=======
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+>>>>>>> Developer
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -279,6 +411,7 @@ footer {
     bottom: 2px;
 }
 
+<<<<<<< HEAD
 .contact-info p,
     .copyright {
         color: #FFFDFD;
@@ -291,6 +424,8 @@ footer {
     font-weight: bold;
 }
 
+=======
+>>>>>>> Developer
 .note-text {
     width: 100%;
     height: 100%;
@@ -340,4 +475,8 @@ footer {
     .footer-logo {
         font-size: 28px;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Developer

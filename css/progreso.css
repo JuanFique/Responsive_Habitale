@@ -1,0 +1,582 @@
+:root {
+    --primary-blue: #1545E6;
+    --secondary-blue: #15C9E6;
+    --white: #FFFFFF;
+    --text-light: #FFFDFD;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+header {
+    background: linear-gradient(90deg, #1545E6 0%, #1589E6 100%);
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 20px;
+    width: 100%;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 200px;
+    height: 60px;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
+    color: var(--text-light);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: auto;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.copyright:hover {
+    font-weight: bold;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+}
+
+.footer-content .logo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_Habitale.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 230px;
+    height: 70px;
+    margin-left: -15px;
+}
+
+.contact-info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info1:hover {
+    font-weight: bold;
+}
+
+.contact-info2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-left: 20px;
+}
+
+.contact-info2:hover {
+    font-weight: bold;
+}
+
+.linea {
+    position: relative;
+    width: 100%;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #15C9E6;
+    margin: 15px 0;
+}
+
+.logoUbicacion {
+    background-image: url('/Responsive_Habitale/Logos/Logo_lugar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoCorreo {
+    background-image: url('/Responsive_Habitale/Logos/Logo_correo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 290px;
+    height: 18px;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(-55%);
+}
+
+.logoMini {
+    background-image: url('/Responsive_Habitale/Logos/Logo_mini.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    bottom: 2px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -330px;
+    width: 330px;
+    height: 50%;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--primary-blue);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    color: var(--white);
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar .menu-header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 0;
+}
+
+.sidebar .menu-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-blue);
+}
+
+.sidebar .menu-header .user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .menu-header .user-info span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.sidebar .menu-header .user-info small {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    padding: 10px 0;
+    border-top: 1px solid #15C9E6;
+    border-bottom: 1px solid #15C9E6;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #1B0EAC;
+}
+
+.sidebar ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+.sidebar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Profile styles */
+.profile {
+    text-align: center;
+    background-color: #4A90E2;
+    padding: 20px;
+    color: var(--white);
+
+}
+
+.profile h1 {
+    font-size: 68px;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    background-color: #7E3FF2;
+    border-radius: 52px;
+    padding: 20px;
+    color: var(--white);
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto; /* Center horizontally */
+    height: 187px;
+    width: 1000px;
+    text-align: left;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 1;
+}
+
+.profile-avatar {
+    width: 108px;
+    height: 108px;
+}
+
+.profile-info h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.profile-level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-grow: 1;
+}
+
+.profile-level h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.profile-level p {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: 100;
+}
+
+.level-icon {
+    position: absolute;
+    top: -80px;
+    right: -20px;
+    width: 125px;
+    height: 125px;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.edit-icon img {
+    width: 48px;
+    height: 48px;
+}
+
+/* Calendar styles */
+.calendar {
+    text-align: center;
+    background-color: #4A90E2;
+    padding: 20px;
+    color: var(--white);
+}
+
+.calendar h1 {
+    font-size: 68px;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    background-color: #7E3FF2;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    max-height: 771px;
+    margin: 0 auto;
+    color: var(--white);
+}
+
+.calendar-header h1 {
+    font-size: 48px;
+    margin: auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.calendar-header button {
+    background-color: var(--secondary-blue);
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50px;
+}
+
+.calendar-header button:hover {
+    background-color: #1B0EAC;
+}
+
+.calendar-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    max-width: 850px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.day {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-grid .date {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: black;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-grid .date.active {
+    background-color: #15C9E6;
+    color: var(--white);
+}
+
+.calendar-grid .date.missed {
+    background-color: #E61515;
+    color: var(--white);
+}
+#streak {
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 20px 0px;
+}
+
+/* Record styles */
+.record {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #7E3FF2;
+    padding: 40px 20px;
+    color: var(--white);
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 1000px;
+    height: 554px;
+}
+
+.record h1 {
+    font-size: 48px; /* Adjusted font size */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Increased gap */
+    margin-bottom: 20px;
+    background-color: #7E3FF2;
+}
+
+.trophy-icon {
+    width: 212px; /* Adjusted size */
+    height: 212px;
+}
+
+.record-streak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Adjusted size */
+    height: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    background-image: url('/Responsive_Habitale/Images/Circulo.png'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    }
+
+.record-streak span {
+    font-size: 28px; /* Adjusted font size */
+    color: white; /* Adjusted text color */
+    font-weight: bold;
+}
+
+.record-description {
+    font-size: 24px; /* Adjusted font size */
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 60px;
+        padding: 0 10px;
+    }
+
+    header .logo {
+        width: 150px;
+        height: 50px;
+    }
+
+    .profile h1, .calendar h1, .record h1 {
+        font-size: 36px; /* Reduce font size */
+    }
+
+    .calendar-container, .record {
+        width: 95%; /* Adjust width */
+        padding: 20px;
+    }
+
+    .profile-card {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+    }
+
+
+    .record-streak {
+        width: 150px; /* Adjust size */
+        height: 150px;
+        font-size: 18px;
+    }
+
+    .record-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 5px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr); /* Adjust grid for smaller screens */
+        gap: 10px;
+    }
+
+    .calendar-grid .date {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+}
