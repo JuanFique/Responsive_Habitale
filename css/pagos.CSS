@@ -417,7 +417,73 @@ footer {
     pointer-events: none;
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1, .subtitle {
+        font-size: 22px;
+    }
+    .task-item {
+        width: 100%;
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .task-name {
+        font-size: 18px;
+    }
+
+    .start-btn {
+       font-size: 14px;
+        width: 100%;
+        max-width: 150px;
+        height: 45px;
+    }
+
+
+   .footer-content {
+        align-items: left;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: left;
+        margin-left: 0;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        width: 250px;
+      
+    }
+
+    .logoMini {
+        width: 260px;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
 
 
     .container {
@@ -460,16 +526,16 @@ footer {
     footer {
         padding: 20px 0;
         display: flex;
-        justify-content: center; /* Center horizontally */
-        text-align: left; /* Align content to the left */
+        justify-content: center; 
+        text-align: left; 
     }
 
     .footer-content {
         width: 100%;
-        max-width: 300px; /* Adjust for smaller screens */
+        max-width: 300px; 
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Align items to the left */
+        align-items: flex-start; 
     }
 
     .footer-content .logo {
@@ -484,7 +550,7 @@ footer {
 
 
     .copyright p {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 

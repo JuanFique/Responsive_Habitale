@@ -15,12 +15,15 @@ body {
 }
 
 .container {
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+     max-width: 1920px;
+    padding: 0 20px;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding: 0 20px;
     position: relative;
 }
 
@@ -102,15 +105,19 @@ h1 {
 }
 
 .task-item {
-    width: 870px;
-    height: 103px;
+    width: 100%;
+    max-width: 870px;
+    height: auto;
+    flex-direction: column;
     background-color: #6B15E6;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 32px;
+        align-items: flex-start;
+    padding: 20px;
     text-decoration: none;
+        gap: 15px;
+
 }
 
 .task-item:hover {
@@ -126,16 +133,17 @@ h1 {
 }
 
 .start-btn {
-    width: 175px;
-    height: 68px;
+    width: 100%;
+        max-width: 175px;
+    height: 50px;
     background-color: #15C9E6;
     border: none;
     border-radius: 50px;
     color: white;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
-    line-height: 68px; /* Match height for proper alignment */
+    line-height: 50px; /* Match height for proper alignment */
     cursor: pointer;
     text-align: center;
     display: inline-block;
@@ -272,4 +280,83 @@ position: relative;
     margin: 0 auto;
     display: block;
     bottom: 2px;
+}
+
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1, .subtitle {
+        font-size: 22px;
+    }
+    .task-item {
+        width: 100%;
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .task-name {
+        font-size: 18px;
+    }
+
+    .start-btn {
+       font-size: 14px;
+        width: 100%;
+        max-width: 150px;
+        height: 45px;
+    }
+
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto 20px;
+        width: 160px;
+        height: auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        font-size: 13px;
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logoUbicacion,
+    .logoCorreo,
+    .logoMini {
+        transform: translateX(0%);
+        width: 100%;
+        max-width: 220px;
+        position: relative;
+    }
 }

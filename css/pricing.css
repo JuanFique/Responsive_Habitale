@@ -373,32 +373,84 @@ footer {
 .overlay.active {
     display: block;
 }
-
-@media (max-width: 400px) {
-    .pricing-card {
-        width: 100%; /* Ajustar el ancho de las tarjetas al 100% del contenedor */
-        height: auto; /* Permitir que la altura sea dinámica */
-        padding: 20px; /* Reducir el padding */
-    }
-
-    .pricing-grid {
-        gap: 10px; /* Reducir el espacio entre las tarjetas */
-    }
-
+@media (max-width: 768px) {
     .pricing-section h2 {
-        font-size: 36px; /* Reducir el tamaño del título */
+        font-size: 44px;
     }
 
-    .pricing-card h3 {
-        font-size: 16px; /* Reducir el tamaño del subtítulo */
+    .pricing-card {
+        width: 90%;
+        height: auto;
+        padding: 25px;
     }
 
     .pricing-card .price {
-        font-size: 32px; /* Reducir el tamaño del precio */
+        font-size: 36px;
     }
 
     .pricing-card ul {
-        font-size: 14px; /* Reducir el tamaño del texto de la lista */
+        font-size: 14px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+   
+   .footer-content {
+        align-items: left;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: left;
+        margin-left: 0;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        width: 250px;
+      
+    }
+
+    .logoMini {
+        width: 260px;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+    .pricing-card {
+        width: 100%; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .pricing-grid {
+        gap: 10px; 
+    }
+
+    .pricing-section h2 {
+        font-size: 36px; 
+    }
+
+    .pricing-card h3 {
+        font-size: 10px; 
+    }
+
+    .pricing-card .price {
+        font-size: 32px; 
+    }
+
+    .pricing-card ul {
+        font-size: 10px; /* Reducir el tamaño del texto de la lista */
     }
 
     .pricing-card button {

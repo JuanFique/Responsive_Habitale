@@ -530,7 +530,120 @@ footer {
     font-weight: bold;
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 768px) {
+      .logoUbicacion,
+    .logoCorreo {
+        width: 200px; /* Adjust width for smaller screens */
+        height: 14px; /* Adjust height for smaller screens */
+    }
+    header {
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    header .logo {
+        width: 150px;
+        height: auto;
+    }
+
+    .profile h1,
+    .calendar h1,
+    .record h1 {
+        font-size: 36px;
+    }
+    .perfil-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .habitale-logo {
+    order: -1;
+  }
+
+  .perfil-card {
+    width: 90%;
+    margin: auto;
+  }
+
+    .calendar-header h1 {
+        font-size: 24px;
+    }
+
+    .calendar-header h2 {
+        font-size: 18px;
+    }
+
+    .calendar-header button {
+        width: 40px;
+        font-size: 18px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile-info h2 {
+        font-size: 24px;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .record {
+        width: 95%;
+        height: auto;
+    }
+
+    .trophy-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .record-streak {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+    }
+    
+   .footer-content {
+        align-items: left;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: left;
+        margin-left: 0;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        width: 250px;
+      
+    }
+
+    .logoMini {
+        width: 260px;
+    }
+    
+}
+@media (max-width: 480px) {
     header {
         height: 60px;
         padding: 0 10px;
@@ -542,35 +655,40 @@ footer {
     }
 
     .profile h1, .calendar h1, .record h1 {
-        font-size: 36px; /* Reduce font size */
+ font-size: 36px; /* Reduce font size */
+
+        font-size: 36px; 
     }
 
     .calendar-container, .record {
-        width: 95%; /* Adjust width */
+
+               width: 95%; /* Adjust width */
+
         padding: 20px;
     }
 
     .profile-card {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         align-items: center;
-        width: 100%; /* Full width */
-        height: auto; /* Auto height */
+        width: 100%; 
+        height: auto; 
     }
 
 
     .record-streak {
-        width: 150px; /* Adjust size */
+        width: 150px; 
         height: 150px;
         font-size: 18px;
     }
 
     .record-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         gap: 5px;
     }
 
     .calendar-grid {
-        grid-template-columns: repeat(4, 1fr); /* Adjust grid for smaller screens */
+    grid-template-columns: repeat(4, 1fr); /* Adjust grid for smaller screens */
+
         gap: 10px;
     }
 

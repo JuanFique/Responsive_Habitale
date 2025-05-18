@@ -362,18 +362,99 @@ footer {
     display: block;
     bottom: 2px;
 }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
 
-/* Media queries para ajustes específicos */
-@media screen and (min-width: 768px) {
-    .content-box {
-        max-width: 600px;
+    .logo-img {
+        height: 40px;
     }
-    
-    .page-title {
-        font-size: 42px;
+
+    main {
+        padding: 15px;
     }
-    
-    .notification-text {
+
+    h1, .subtitle {
+        font-size: 22px;
+    }
+    .task-item {
+        width: 100%;
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .task-name {
         font-size: 18px;
+    }
+
+    .start-btn {
+       font-size: 14px;
+        width: 100%;
+        max-width: 150px;
+        height: 45px;
+    }
+
+   .footer-content {
+        align-items: left;
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: left;
+        margin-left: 0;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        width: 250px;
+      
+    }
+
+    .logoMini {
+        width: 260px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        margin: 0 auto 20px;
+        width: 160px;
+        height: auto;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        font-size: 13px;
+        align-items: center;
+        margin-left: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .logoUbicacion,
+    .logoCorreo,
+    .logoMini {
+      
+        width: 100%;
+        max-width: 220px;
+        position: relative;
     }
 }
