@@ -54,16 +54,15 @@ body {
 
 /* Main Content */
 .main-content {
-    /*position: relative;*/
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    width: 100%;
-    /*overflow: visible;*/
+  position: relative; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* Estilo del texto vacío */
@@ -77,46 +76,53 @@ body {
     line-height: 1.4;
 }
 
-/* Botón de lista de tareas */
-.task-list-button {
-    position: relative;
-    bottom: 10px; 
-    left: -40%;
-    transform: translateX(-50%);
-    width: 260px;
-    height: 82px;
-    background: #6B15E6;
-    border-radius: 50px;
-    border: none;
-    color: white;
-    font-size: 32px;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 10;
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 30px;
 }
 
-.task-list-button:hover {
-    background: #5a10c4;
+.task-list-button {
+  position: absolute;             
+  bottom: 20px;                
+  left: 20px;                  
+  width: 260px;
+  height: 82px;
+  background: #6B15E6;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-size: 32px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 10;
 }
+.task-list-button:hover {
+  background: #5a10c4;
+}
+
+
 
 /* Botón de añadir tarea */
 .add-task-button {
-    position: absolute;
-    bottom: 35px;
-    right: 100px;
-    width: 65px;
-    height: 65px;
-    background: #D9D9D9;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-    z-index: 10;
+  position: absolute;
+  bottom: 35px;
+  right: 40px; 
+  width: 65px;
+  height: 65px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  z-index: 10;
 }
 
 .add-task-button:hover {
@@ -261,46 +267,98 @@ footer {
     bottom: 2px;
 }
 
-/* Media Queries para Responsividad */
-@media screen and (max-width: 768px) {
-    .task-list-button {
-        left: 50%;
-        transform: translateX(-50%);
-        width: 220px;
-        font-size: 28px;
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 0 30px;
+    }
+
+    .footer-content {
+        padding: 0 30px;
     }
 
     .add-task-button {
-        right: 50px;
+        right: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 20px;
     }
 
-    .empty-text {
-        font-size: 28px;
+    .logo {
+        padding: 20px 0;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+
+    .footer-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        transform: translateX(-50%);
+    }
+
+    .add-task-button {
+        right: 20px;
+        width: 55px;
+        height: 55px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 24px;
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    .back-button {
+        font-size: 20px;
+        margin: 10px 0;
     }
 
     .task-list-button {
-        width: 180px;
-        height: 70px;
-        font-size: 24px;
+    width: 160px;
+    height: 60px;
+    font-size: 20px;
+    left: 10px; 
     }
 
-    .empty-text {
-        font-size: 24px;
+    .add-task-button {
+        right: 15px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
     }
 
-    .footer {
-        height: auto;
-        padding-bottom: 30px;
+    .plus-icon {
+        font-size: 36px;
     }
 
-    .contact-info {
-        width: 100%;
-        align-items: center;
+    .footer-content {
+        padding: 0 15px;
+    }
+
+    .logoMini {
+        width: 240px;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        width: 230px;
+        transform: translateX(-50%);
     }
 }

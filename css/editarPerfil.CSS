@@ -209,12 +209,15 @@ h1 {
 .profile-edit {
     background-color: var(--purple-background);
     border-radius: 52px;
-    width: 1000px;
-    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
+
 
 .avatar-section {
     text-align: center;
@@ -510,6 +513,107 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+
+    /* Corrige cortes de contenido en pantallas pequeñas y medianas */
+html, body {
+    height: auto;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Responsividad para tablets y laptops pequeñas */
+@media (max-width: 1024px) {
+    .profile-edit {
+        width: 90%;
+        max-width: 100%;
+        padding: 30px 20px;
+    }
+
+    .avatar-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .form-group label,
+    .form-group input {
+        font-size: 26px;
+    }
+
+    .form-group input {
+        height: 48px;
+    }
+}
+
+.save-button {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+    border: none;
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    .form-group label {
+        font-size: 24px;
+    }
+
+    .form-group input {
+        font-size: 24px;
+        height: 45px;
+    }
+
+    .avatar-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-edit {
+        padding: 30px 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    .form-group label {
+        font-size: 28px;
+    }
+
+    .form-group input {
+        font-size: 26px;
+        height: 50px;
+    }
+
+    .avatar-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .profile-edit {
+        padding: 40px;
+        width: 90%;
+        max-width: 90%;
+    }
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 
 }

@@ -298,6 +298,12 @@ footer {
     display: block;
     bottom: 2px;
 }
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* Media Queries */
 @media (max-width: 1024px) {
     .main-container {
@@ -371,4 +377,97 @@ footer {
     .footer-content {
         padding-left: 20px;
     }
+    @media (max-width: 375px) {
+    .note-title h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .column h2,
+    .note-summary h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .save-button {
+        font-size: 18px;
+        padding: 10px 20px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .content-area {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .note-container {
+        min-height: auto;
+    }
+
+    .footer-content {
+        padding: 0 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .footer-content .logo {
+        margin-left: 0;
+        width: 100%;
+        background-position: center;
+    }
+
+    .logoUbicacion,
+    .logoCorreo {
+        transform: none;
+        width: 100%;
+        max-width: 250px;
+        position: static;
+        margin: 10px auto;
+    }
+
+    .logoMini {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .note-content {
+        gap: 20px;
+    }
+}
+
+/* Ajuste extra para pantallas ultra pequeñas */
+@media (max-width: 320px) {
+    .note-title h1 {
+        font-size: 26px;
+    }
+
+    .save-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .logo-img {
+        height: 40px;
+    }
+
+    .header {
+        padding: 5px 15px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .note-container {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
 }

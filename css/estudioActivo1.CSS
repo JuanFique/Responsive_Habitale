@@ -18,7 +18,8 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 /* Header styles */
@@ -54,8 +55,9 @@ body {
 }
 
 .logo-img {
-    height: 60px; 
+    height: 60px;
     width: auto;
+    max-width: 100%;
 }
 
 /* Main content styles */
@@ -85,8 +87,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    max-width: 870px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .task-item {
@@ -95,7 +99,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
 }
 
 .task-text {
@@ -123,26 +129,14 @@ body {
 footer {
     background: linear-gradient(270deg, #154FE6 0%, #1587E6 17%, #156EE6 77%, #1545E6 100%);
     color: var(--text-light);
-    padding: 40px 0; /* Match footer padding */
+    padding: 40px 0;
     text-align: center;
     margin-top: auto;
     position: relative;
     width: 100%;
-    flex-shrink: 0; /* Evitar que el footer se reduzca */
+    flex-shrink: 0;
 }
 
-.contact-info {
-    margin-bottom: 10px;
-}
-
-.contact-info p,
-.copyright p {
-    font-size: 14px;
-    font-weight: 300;
-}
-.copyright:hover {
-    font-weight: bold;
-}
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -246,6 +240,28 @@ footer {
     margin: 0 auto;
     display: block;
     bottom: 2px;
+}
+
+.contact-info {
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+}
+.copyright:hover {
+    font-weight: bold;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34.5px;
+    margin-left: 30px;
+    padding: 10px;
 }
 
 
