@@ -53,8 +53,9 @@ header {
 
 /* Banner styles */
 .banner {
-    width: 930px;
-    height: 92px;
+    width: 100%;
+    max-width: 930px;
+    height: auto;
     background-color: #2B00AB;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -62,9 +63,9 @@ header {
     justify-content: center;
     align-items: center;
     margin: 60px 0 40px 0;
-    padding: 0 8px;
-    margin-left: 0; /* Asegura que el margen izquierdo sea 0 */
-    align-self: flex-start; /* Alinea el banner completamente a la izquierda */
+    padding: 10px 20px;
+    align-self: flex-start;
+    box-sizing: border-box;
 }
 
 .banner-text {
@@ -86,10 +87,11 @@ main {
 }
 
 .section-container {
-    width: 1000px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
     background-color: #64acec;
-    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .section-header {
@@ -112,7 +114,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 60px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .image-container {
@@ -120,16 +123,18 @@ main {
 }
 
 .section-image {
-    width: 509px;
-    height: 382px;
+    width: 100%;
+    max-width: 509px;
+    height: auto;
 }
 
 .text-content {
-    padding: 20px 60px;
+    padding: 20px;
     color: black;
     font-size: 20px;
     font-weight: 400;
     line-height: 34.5px;
+    box-sizing: border-box;
 }
 
 .text-content p {
@@ -334,5 +339,121 @@ footer {
         padding: 20px;
         font-size: 12px;
     }
+
+    @media (min-width: 401px) and (max-width: 1024px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 160px;
+        height: 50px;
+    }
+
+    .banner {
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        font-size: 28px;
+        border-radius: 20px;
+    }
+
+    .banner-text {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .section-container {
+        width: 95%;
+    }
+
+    .section-header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-content {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .cta-button {
+        width: 220px;
+        height: 70px;
+        font-size: 26px;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-content .logo {
+        width: 180px;
+        height: 60px;
+    }
+
+    .contact-info1,
+    .contact-info2 {
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .logoUbicacion,
+    .logoCorreo,
+    .logoMini {
+        width: 200px;
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .text-content ul li {
+        font-size: 18px;
+        margin-left: 20px;
+        padding: 8px;
+    }
+}
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .banner-text {
+        font-size: 22px;
+    }
+
+    .cta-button {
+        width: 200px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .text-content {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .section-container {
+        padding: 10px;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+    }
+}
+
+
 }
 

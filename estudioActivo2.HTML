@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HABITALE - Notas</title>
-    <link rel="stylesheet" href="css/cornell2.CSS">
+    <link rel="stylesheet" href="css/estudioActivo2.CSS">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <div class="logo">HABITALE</div>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="back-button">
+                    <span class="back-arrow">←</span>
+                </a>
+                <div class="logo">
+                    <img src="Logos/Logo_Habitale.svg" alt="Logo Habitale" />
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main class="main-container">
         <div class="note-container">
             <div class="note-title">
-                <h1>Titulo</h1>
+                <h1 contenteditable="true">Título</h1>
             </div>
             <div class="note-divider horizontal-divider"></div>
             
@@ -44,22 +53,24 @@
         <button class="save-button">Guardar</button>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
-            <div class="footer-logo">HABITALE</div>
-            <div class="footer-info">
-                <div class="contact-info">
-                    <div class="address">
-                        <span class="icon">📍</span>
-                        <span>Av. Cra 68 #110a - 70</span>
-                    </div>
-                    <div class="email">
-                        <span class="icon">✉️</span>
-                        <span>HabiTale@gmail.com</span>
-                    </div>
-                </div>
-                <div class="copyright">COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.</div>
+            <div class="logo"></div>
+            <div class="contact-info1">
+                <p>Av. Cra 68 #110a - 70</p>
+                <div class="logoUbicacion"></div>
             </div>
+            <div class="contact-info2">
+                <p>HabiTale@gmail.com</p>
+                <div class="logoCorreo"></div>
+            </div>
+            <div class="linea">
+                <p></p>
+            </div>
+            <div class="copyright">
+                COPYRIGHT @ 2025. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+            <div class="logoMini"></div>
         </div>
     </footer>
 </body>
